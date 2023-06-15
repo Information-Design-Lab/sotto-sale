@@ -164,12 +164,16 @@ p.p-fonti{
 /* ******************** FIRST PAGE ***************** */
 .home_container{
     position: fixed;
-    background-image:url("/img/background_home.jpg");
     height: 100vh;
     width: 100vw;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sfondo_homepage{
+    position: fixed;
+    width: 100%;
+    z-index: 0;
 }
 
 .home{
