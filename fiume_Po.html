@@ -1,0 +1,1203 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>sottosale</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<a href="index.html"><div id="logo_su_mappa">
+			<img id ="logo" class="visible" src="img/logo.svg" alt="logo">
+			<img id ="logo_w" src="img/logo_w.svg" alt="logo">
+		</div></a>
+		<div id="button_satellite">
+			<img class="satellite_off visible" src="img/satellite_off.svg">
+			<img class="satellite_active" src="img/satellite_active.svg">
+			<img class="idrografica_off" src="img/idrografica_off.svg">
+			<img class="idrografica_active" src="img/idrografica_active.svg">
+		</div>
+		<div id="button_credits">
+			<img class="credits_off" src="img/credits_off.svg">
+			<img class="credits_active" src="img/credits_active.svg">
+		</div>
+
+		<!-- Cartiglio -->
+		<div class="row d-flex justify-content-center cartiglio_mappa">
+			<div class="col-1 d-flex align-items-center border_bottom border_left border_top">
+				<p><span id="cartiglio_lat">44.70051 , </span><span id="cartiglio_lng">7.09241</span></p>
+			</div>
+			<div class="col-1 d-flex align-items-center border_bottom border_left border_top">
+				<p><span id="cartiglio_alt">2022</span> m s.l.m.</p>
+			</div>
+			<div class="col-1 d-flex align-items-center border_bottom border_left border_top border_right last_div ">
+				<p><span id="cartiglio_km">652</span> km</p>
+			</div>
+		</div>
+
+		<div id='map'></div>
+
+
+		<!-- ********************************************************* Card Pian Del Re ******************************* -->
+		<!-- CARD -->
+		<div class="card visible" id="card-1">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/pian-del-re.jpg" alt="pian-del-re">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>PIAN DEL RE</h3></div>
+				<p>Sgorga da un masso un rigagnolo d’acqua, più piccolo del previsto: è il fiume Po che nasce tra le valli del Monviso, a una quota di 2022 m.
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="1">
+				<p>SCOPRI ></p>
+			</div>
+			<!-- <div class="marker-id"><p></p></div> -->
+		</div>
+
+
+		<!-- ********************************************************* Card Ostana ******************************* -->
+		<div class="card" id="card-2">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/ostana.jpg" alt="ostana">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>OSTANA</h3></div>
+				<p>Attorno al Po nascono anche piccole comunità, come gli occitani, abitanti di uno dei borghi più belli d'Italia che tramandano l’antica lingua d’oc.
+				</p>
+			</div>
+
+			<!-- 5. player audio -->
+			<div class="sound">
+				<audio controls>
+					<source src="sound/00_ostana.mp3" type="audio/ogg">
+				</audio>
+			</div>
+		</div>
+
+
+		<!-- ********************************************************* Card Torino ******************************* -->
+		<div class="card" id="card-3">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/torino.jpg" alt="torino">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>TORINO</h3></div>
+				<p>Elisa Palazzi, docente di Fisica del Clima a Torino, spiega nel podcast “L’ultima goccia” di Chora Media i possibili effetti del cambiamento climatico sulle Alpi e la sorgente del fiume.</p>
+			</div>
+
+			<!-- 5. player audio -->
+			<div class="sound">
+				<audio controls>
+					<source src="sound/01_torino.mp3" type="audio/ogg">
+				</audio>
+			</div>
+		</div>
+
+		
+		<!-- ********************************************************* Card Lomellina ******************************* -->
+		<div class="card" id="card-4">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/lomellina.jpg" alt="lomellina">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>CANDIA LOMELLINA</h3></div>
+				<p>Le scarse precipitazioni e le alte temperature influenzano e minacciano le coltivazioni di riso locali e gli splendidi paesaggi della Lomellina.
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="2">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+
+
+		<!-- ********************************************************* Card Grandi Laghi ******************************* -->
+		<div class="card" id="card-5">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/grandi_laghi.jpeg" alt="grandi_laghi">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>GRANDI LAGHI</h3></div>
+				<p>Dai Grandi Laghi prealpini dipartono i principali affluenti del Po, per questo motivo infatti, oltre ai ghiacciai, questi costituiscono una importante riserva d’acqua per il Distretto del grande fiume. </p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="3">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+		
+
+		<!-- ********************************************************* Card Mezzanino ******************************* -->
+		<div class="card" id="card-6">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/ponte-della-becca.jpg" alt="ponte-della-becca">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>MEZZANINO</h3></div>
+				<p>Qui il Ticino si unisce al Po e, come racconta Gianni Brera, la loro unione dà origine al percorso sinuoso del fiume, un “inquieto serpentone dalle larghe ed inutili spire”.
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="4">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+		
+
+		<!-- ********************************************************* Card Piacenza ******************************* -->
+		<div class="card" id="card-7">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/piacenza.jpg" alt="piacenza">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>PIACENZA</h3></div>
+				<p>Negli ultimi due anni la portata d’acqua ha raggiunto il minimo storico, lasciando intravedere sempre più zone di terreno pericolosamente aride.</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="5">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+		
+
+		<!-- ********************************************************* Card Cremona ******************************* -->
+		<div class="card" id="card-8">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/cremona-3.jpg" alt="cremona">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>CREMONA</h3></div>
+				<p>Anche qui la siccità ha un forte impatto sul territorio: la portata del Po, in continua diminuzione, influisce sull’ecosistema, l’economia e le attività irrigue. </p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="6">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+
+
+		<!-- ********************************************************* Card Boretto ******************************* -->
+		<div class="card" id="card-9">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/boretto.jpg" alt="boretto">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>BORETTO</h3></div>
+				<p>I Bollettini dell’ADBPO classificano gli ultimi valori del 2022 come siccità estrema, ma l’improvviso alluvione di maggio 2023 sembra riportare i valori nella norma.
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="7">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+
+
+		<!-- ********************************************************* Card Guastalla ******************************* -->
+		<div class="card" id="card-10">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/guastalla-vacche-rosse.jpg" alt="guastalla-vacche-rosse">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>GUASTALLA</h3></div>
+				<p>La scarsità d’acqua influenza anche le attività economiche del Distretto del fiume: sentiamo le parole di Marco Prandi, allevatore delle vacche rosse, specie utilizzata per la produzione del Parmigiano Reggiano.
+				</p>
+			</div>
+
+			<!-- 5. player audio -->
+			<div class="sound">
+				<audio controls>
+					<source src="sound/02_guastalla.mp3" type="audio/ogg">
+				</audio>
+			</div>
+		</div>
+		
+
+		<!-- ********************************************************* Card Pontelagoscuro ******************************* -->
+		<div class="card" id="card-11">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/pontelagoscuro.jpeg" alt="pontelagoscuro">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>PONTELAGOSCURO</h3></div>
+				<p>Un fenomeno poco conosciuto minaccia l’intero ecosistema biologico ed economico del territorio: la risalita del cuneo salino, ovvero l’intrusione dell’acqua salata nell’entroterra.
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="8">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+		
+
+		<!-- ********************************************************* Card Delta ******************************* -->
+		<div class="card" id="card-12">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				<img class="object-fit-cover" width="376" height="296" src="img/delta-del-po-2.jpg" alt="delta-del-po">
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>DELTA DEL PO</h3></div>
+				<p>Qui il grande fiume termina il suo percorso e si unisce al mare, il panorama caratteristico del Delta però è messo a rischio da un effetto domino causato dalla siccità.  
+				</p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="9">
+				<p>SCOPRI ></p>
+			</div>
+		</div>
+		
+		<div class="card" id="card-13">
+			<!-- 1. close -->
+			<div class="close position-absolute top-0 end-0">
+				<img class="close_default" src="img/close.svg" alt="close">
+				<img class="close_hover" src="img/close_hover.svg" alt="close">
+			</div>
+
+			<!-- 2. foto -->
+			<div class="foto">
+				
+			</div>
+			
+			<!-- 3. pin -->
+			<div class="pin">
+				<img src="img/pin.svg" alt="pin">
+			</div>
+
+			<!-- 3. titolo -->
+			<!-- 4. paragrafo -->
+			<div class="descrizione">
+				<div class="marker-name"><h3>FERRARA</h3></div>
+				<p>La risalita del cuneo salino non può quindi essere ignorata: un’installazione per sensibilizzare gli abitanti locali e far aumentare la consapevolezza su un fenomeno pericoloso e invisibile. </p>
+			</div>
+
+			<!-- 5. link scopri -->
+			<div class="scopri" data-approfondimenti="10">
+				<p>SCOPRI ></p>
+			</div>
+		</div> 
+		
+		
+		
+
+		<!-- ********* PAGINE DI APPROFONDIMENTO *************************************************************** -->
+
+		<!-- APPROFONDIMENTI *********************************************************************** PIAN DEL RE -->
+		<div class="approfondimenti m-0" id="approfondimenti-1"> 
+
+			<!-- header -->
+			<div id="header_pian_del_re" class="row m-0 approfondimenti_header border_bottom">
+                <!-- logo -->
+                <div class="col-1 d-flex justify-content-center border_right p-0 logo">
+                    <img src="img/logo.svg" alt="logo_sottosale">
+                </div>
+                <!-- tappa -->
+                <div class="col-10 d-flex align-items-center justify-content-center p-0 tappa">
+                    <p class="tappa-approfondimenti" id="pian_del_re">PIAN DEL RE </p>
+                </div>
+                
+                <!-- close -->
+                <div class="col-1 d-flex justify-content-center border_left p-0 close">
+					<img class="close_default" src="img/close.svg" alt="close">
+					<img class="close_hover" src="img/close_hover.svg" alt="close">
+                </div>
+            </div>
+
+            <!-- 2. titolo -->
+            <div class="row m-0 container_title_approfondimenti border_bottom">
+                <div class="col-12 d-flex align-items-center p-0">
+                    <h2>LA SORGENTE È <br> IRRICONOSCIBILE</h2>
+                </div>                
+            </div>
+
+            <!-- 3. Video -->
+            <div class="row m-0 border_bottom">
+                <div class="col-3 g-0 fonti">
+                    <p class="p-fonti">Fonte: La Stampa <br>Video di: Niccolò Lupone</p>
+                </div>
+                <div class="col-9 video border_left">
+                    <video width="320" height="240" controls>
+						<source src="video/00_sorgente.mp4" type="video/mp4">
+					</video>
+                </div>
+            </div>
+            
+            <!-- 4. Citazione / articolo -->
+            <div class="row m-0" id="container_articolo_1">
+                <div class="col-5 g-0 citazione-approfondimenti-1">
+					<h2 class="quotes_apertura">“</h2>
+                    <h2>La montagna è senza neve. Come un uomo che invecchia, ma per colpa dell’uomo.</h2>
+					<h2 class="quotes_chiusura">”</h2>
+                </div>
+                <div class="col-7 d-flex align-items-center articolo-approfondimenti-1">
+                    <p class="body-1">A Pian del Re, sotto il Monviso, a poco più di duemila metri di altitudine, una roccia indica il punto in cui nasce il Po, il più lungo fiume italiano. Le acque che arrivano dai ghiacciai confluiscono in un piccolo torrente che, scendendo verso valle, diventa mano a mano più grande. La mancanza di precipitazioni nevose, che fino ad oggi hanno caratterizzato questo inverno, rendono evidente quello che si ripercuote più in basso, dove la siccità rischia di mettere a dura prova il settore agricolo e non solo. Camminando lungo il letto del torrente si sente il rumore dell'acqua che scorre nel sottosuolo, piccoli rivoli emergono tra le rocce, tutto attorno qualche sparuto cumulo di neve e niente più. Un paesaggio insolito per questo periodo dell'anno a questa altitudine.
+                    </p>    
+                </div>
+            </div>
+            
+			<!-- 5. Back to top -->
+			<div class="row">
+				<div class="col-12 d-flex align-items-center border_top back_to_top"><a href="#header_pian_del_re">BACK TO TOP</a></div>
+			</div>
+			
+		</div> 
+
+
+
+		<!-- APPROFONDIMENTI *********************************************************************** CANDIA LOMELLINA -->
+		<div class="approfondimenti m-0" id="approfondimenti-2"> 
+
+			<div class="container-fluid m-0 p-0 container_title_lomellina">
+				<!-- header -->
+				<div id="header_candia_lomellina" class="row m-0 approfondimenti_header border_bottom_w">
+					<!-- logo -->
+					<div class="col-1 d-flex justify-content-center border_right_w p-0 logo">
+						<a class="d-flex justify-content-center" href="index.html"><img src="img/logo_w.svg" alt="logo_sottosale"></a>
+					</div>
+		
+					<!-- tappa -->
+					<div class="col-10 d-flex align-items-center justify-content-center p-0 tappa">
+						<p class="tappa-approfondimenti" id="candia_lomellina">CANDIA LOMELLINA</p>
+					</div>
+					
+					<!-- close -->
+					<div class="col-1 d-flex justify-content-center border_left_w p-0 close">
+						<img class="close_default" src="img/close.svg" alt="close">
+						<img class="close_hover" src="img/close_hover.svg" alt="close">
+					</div>
+				</div>
+
+				<!-- 2. titolo -->
+				<div class="row m-0 container_title_approfondimenti">
+					<div class="col-12 d-flex align-items-center p-0">
+						<h2 class="white">IL MARE <br> A QUADRETTI</h2>
+					</div>                
+				</div>
+			</div>
+
+            <div id="carouselExampleIndicators" class="carousel slide m-0 p-0 candia_lomellina_slider">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="img/mare_quadretti_1.jpg" class="d-block object-fit-cover w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/mare_quadretti_2.jpg" class="d-block object-fit-cover w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/mare_quadretti_3.jpg" class="d-block object-fit-cover w-100" alt="...">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+            
+			<div class="row border_bottom">
+				<div class="col-2 fonti border_right">
+					<p class="p-fonti">Foto:<br>Elisabetta82 / <br> Shutterstock / <br> Steve Sidepiece / <br> 
+						Shutterstock / <br> Shutterstock / <br> Shutterstock / <br><br> Fonti: <br> La nuova Provincia</p>
+				</div>
+				<div class="col-10 d-flex align-items-center articolo-approfondimenti-2">
+					<p class="body-1">Un panorama meraviglioso, romantico al tramonto e nelle stagioni di fioritura: si tratta 
+						delle risaie che vengono allagate tra Monferrato, Lomellina e vercellese, dopo essere state arate e concimate. 
+						Sebbene la risaia tradizionale necessiti di grandi quantitativi di acqua per fruttare, si inserisce in un 
+						sistema di scambio continuo con la natura, che non spreca, ma ricicla costantemente la risorsa idrica, 
+						attraverso una fitta combinazione di canali e falde sotterranee. Ogni ‘camera’ – ovvero lo spazio di una 
+						risaia – comunica con le altre di argine in argine,  così da consentire il lento fluire dell’acqua: i germogli 
+						di riso restano così in immersione per oltre un mese per difendersi dagli sbalzi di temperatura e dar vita alle
+						piantine che arriveranno a maturazione a fine estate.</p>
+				</div>
+			</div>
+
+			<div class="row border_bottom">
+				<div class="col-9 video border_left">
+                    <video width="320" height="240" controls>
+						<source src="video/01_lomellina.mp4" type="video/mp4">
+					</video>
+                </div>
+				<div class="col-3 fonti border_left">
+					<p class="p-fonti">Video di...</p>
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="col-3"></div>
+				<div class="col-6 d-flex align-items-center articolo-approfondimenti-2_1">
+					<p>Le risaie vengono allagate tramite un meccanismo di stoccaggio dell’acqua in falda, generato all’inizio 
+					della primavera, che è direttamente collegato ai livelli idrici del Po. Esso assorbe come una spugna l’acqua durante il 
+					periodo dell’allagamento e la cede, in falda, al Po, garantendo l’agricoltura lungo la sua fascia fluviale. Il problema 
+					della siccità coinvolge anche questo ramo della Valle del Fiume: non avendo a disposizione acqua in modo continuativo, 
+					bisogna ripensare i metodi tradizionali di coltivazione di riso e, d’altra parte, diminuisce sempre di più l’apporto 
+					d’acqua dalle risaie al Po.</p>
+				</div>
+			</div>
+
+
+			<div class="row citazioni-approfondimenti-2 white">
+				<div class="col-1"></div>
+				<div class="col-7 d-flex align-items-center">
+                    <h2>“ La prima bagnatura è sempre quella più difficile.</h2>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-2"></div>
+				<div class="col-6">
+					<p class="body-2">La prima bagnatura è sempre quella più difficile: però piano piano ci va pazienza 
+					e tempo, soprattutto quest’anno, è il 16 luglio ed è assurdo pensare di iniziare a bagnare un campo il 16 di luglio. 
+					Questa è la prima acqua che vede, poi praticamente dall’8 di dicembre ha piovuto qualche volta, ma mai da bagnare, ha 
+					fatto un temporale all’inizio di maggio, un temporale a fine giugno, ma pochissima roba, da bagnare mai e non è mai 
+					successa una cosa del genere.</p>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-8"></div>
+				<div class="col-1 ">
+					<h2 class="quotes_chiusura">”</h2>
+				</div>
+				<div class="col-3"></div>
+			</div>
+
+
+			<div class="row citazioni-approfondimenti-2_1 background_blu white">
+				<div class="col-1"></div>
+				<div class="col-5">
+                    <h2>“ Il seme poi si bagna, la risaia si allaga...</h2>
+				</div>
+				<div class="col-4">
+					<p class="body-2">L’acqua viene dall’ingresso del campo, c’è una bocchetta di entrata per l’acqua ed è sempre del roggione, 
+					viene canalizzata attraverso una complicatissima rete di fossi che si diramano per tutto il paese ed è una cosa molto complessa
+					ma anche molto affascinante perché si vede il lavoro fatto nel corso degli anni per garantire l’irrigazione ai campi e tutto 
+					questo sistema di invasi garantisce in anni normali la presenza di acqua per irrigare le risaie.</p>
+				</div>
+				<div class="col-2"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-10"></div>
+				<div class="col-1">
+					<h2 class="quotes_chiusura">”</h2>
+				</div>
+				<div class="col-1"></div>
+			</div>
+
+
+			<div class="row citazioni-approfondimenti-2 white">
+				<div class="col-1"></div>
+				<div class="col-6 d-flex align-items-center">
+                    <h2>“ L’ipotesi peggiore è l’abbandono del riso...</h2>
+				</div>
+				<div class="col-5"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-2"></div>
+				<div class="col-6">
+					<p class="body-2">non su tutte le superfici, ma su una buona parte delle superfici aziendali, ad esempio io penso tranquillamente 
+						in metà della mia azienda di abbandonare il riso, abbandonarlo perché invece che ricreare situazioni di difficoltà nel bagnare 
+						che poi si tramutano in difficoltà nel crescere quindi minore resa, difficoltà nel controllare le infestanti, poi costi, perché 
+						alla fine sono soprattutto poi quelli. Si pensa anche di abbandonare il riso in tante zone, a favore di colture invernali che 
+						possono essere il grano, l’orzo…</p>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-8"></div>
+				<div class="col-1">
+					<h2 class="quotes_chiusura">”</h2>
+				</div>
+				<div class="col-3"></div>
+			</div>
+
+			<div class="row background_blu white citazioni-approfondimenti-2_2">
+				<div class="col-1"></div>
+				<div class="col-10">
+					<h3>CRISTIANO CARTURAN / <br>Imprenditore / Azienda agricola “La Furnàs”</h3>
+				</div>
+				<div class="col-1"></div>
+			</div>
+
+			<!-- 5. Back to top -->
+			<div class="row">
+				<div class="col-12 d-flex align-items-center border_top back_to_top"><a href="#header_candia_lomellina">BACK TO TOP</a></div>
+			</div>
+
+		</div> 
+
+		<!-- APPROFONDIMENTI *********************************************************************** Grandi Laghi -->
+		<div class="approfondimenti m-0 p-0" id="approfondimenti-3"> 
+			<div id="header_grandi_laghi" class="row m-0 p-0 approfondimenti_header border_bottom">
+				<!-- logo -->
+				<div class="col-1 d-flex justify-content-center border_right p-0 logo">
+					<img src="img/logo.svg" alt="logo_sottosale">
+				</div>
+				<!-- tappa -->
+				<div class="col-10 d-flex align-items-center justify-content-center p-0 tappa">
+					<p class="tappa-approfondimenti" id="grandi_laghi">GRANDI LAGHI</p>
+				</div>
+				
+				<!-- close -->
+				<div class="col-1 d-flex justify-content-center border_left p-0 close">
+					<img class="close_default" src="img/close.svg" alt="close">
+					<img class="close_hover" src="img/close_hover.svg" alt="close">
+				</div>
+			</div>
+
+			<!-- 2. titolo -->
+            <div class="row m-0 p-0 container_title_approfondimenti-2">
+				<div class="col-1"></div>
+                <div class="col-10 d-flex align-items-center p-0">
+                    <h2>Una riserva <br> sotto controllo</h2>
+                </div>                
+				<div class="col-1"></div>
+            </div>
+			<div class="row m-0 container-testi">
+				<div class="col-1"></div>
+				<div class="col-5">
+					<p class="body-2">I grandi laghi lombardi regolano circa 16.000 Km2 del bacino del Po (Carta Ittica del Fiume Po), ossia circa 
+					un quinto dell’intera superficie del distretto. I Fiumi che li attraversano scendendo a valle hanno un ruolo fondamentale 
+					per il Po, poiché versano nelle sue acque arricchendone la portata. Per questo motivo, i Laghi fungono da riserva d’acqua 
+					fondamentale per il Fiume, ma se a causa della siccità il loro volume decresce, i giacimenti di risorse idriche immagazzinati 
+					risultano carenti. </p>
+				</div>
+				<div class="col-5">
+					<p class="body-2">La quantità d’acqua infatti è inferiore rispetto alla media storica: questo costituisce una delle principali 
+					cause della magra invernale del fiume, fenomeno considerato da Meuccio Berselli – Segretario Generale dell’Autorità 
+					Distrettuale del fiume Po – come un "campanello d’allarme in termini di acqua da prelevare in un prossimo futuro per 
+					l’agricoltura”: la stagione irrigua, infatti, negli ultimi anni è partita sempre più in anticipo proprio a causa della 
+					prolungata siccità scaturita dalle conseguenze della situazione climatica.</p>
+				</div>
+				<div class="col-1"></div>
+			</div>
+			<div class="row m-0 p-0 border_top border_bottom">
+				<div class="col-6 d-flex align-items-center border_right padding-left">
+					<p class="p-fonti">Info su:</p>
+				</div>
+				<div class="col-6 p-0">
+					<div class="button-laghi active d-flex justify-content-center align-items-center border_right" id="lago_maggiore">
+						<p class="body-1">LAGO MAGGIORE</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center border_right" id="lago_como">
+						<p class="body-1">LAGO DI COMO</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center border_right" id="lago_iseo">
+						<p class="body-1">LAGO D'ISEO</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center" id="lago_garda">
+						<p class="body-1">LAGO DI GARDA</p>
+					</div>
+				</div>
+			</div>
+			<div class="row m-0 p-0 border_bottom container_laghi_indentikit">
+				<div class="col-6 border_right p-0">
+					<img class="laghi_img" src="img/lago-maggiore.jpeg" alt="lago-maggiore">
+				</div>
+				<div class="col-6">
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right padding-top">
+							<p class="body-2">REGIONE /</p>
+						</div>
+						<div class="col-8 padding-top">
+							<p class="body-1 regione">Lombardia</p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">SUPERFICIE /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 superficie">145 km<sup>2</sup></p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">VOLUME /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 volume">23,37 km<sup>3</sup></p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">PROFONDIÀ MASSIMA /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 profondità_massima">412 M</p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">PROFONDITÀ MEDIA /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 profondità_media">161 M</p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">SVILUPPO COSTIERO /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 sviluppo_costiero">170 Km</p>
+						</div>
+					</div>
+					<div class="row border_bottom padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">IMMISSARI /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 immissari">Adda, Mera, Fiumelatte, Pioverna, Cosia, Liro, Livo, Albano, Telo, Breggia, Varrone, Gerenzone, Caldone</p>
+						</div>
+					</div>
+					<div class="row d-flex align-items-stretch padding-left">
+						<div class="col-4 border_right">
+							<p class="body-2">EMISSARI /</p>
+						</div>
+						<div class="col-8">
+							<p class="body-1 emissari">Adda</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-0 p-0 border_bottom">
+				<div class="col-6 border_right p-0">
+					<div class="button-laghi active d-flex justify-content-center align-items-center border_right" id="lago_maggiore">
+						<p class="body-1">CONFRONTO</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center border_right" id="lago_como">
+						<p class="body-1">2021</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center border_right" id="lago_iseo">
+						<p class="body-1">2022</p>
+					</div>
+					<div class="button-laghi d-flex justify-content-center align-items-center" id="lago_garda">
+						<p class="body-1">2023</p>
+					</div>
+				</div>
+				<div class="col-6">
+					
+				</div>
+			</div>
+			<div class="row m-0 p-0 border_bottom container_laghi_indentikit">
+				<div class="col-6 border_right padding-left">
+					<img class="laghi_img" src="img/altezza_maggiore-confronto.svg" alt="altezza_idrometrica_lago_maggiore_confronto">
+				</div>
+				<div class="col-6 padding-left padding-top-2">
+					<div class="row">
+						<div class="col-1"></div>
+						<div class="col-8">
+							<h3>Altezza idrometrica</h3>
+							<p class="body-1">L’altezza idrometrica di un lago è la misura dell’altezza del suo livello d’acqua, 
+								rispetto ad un punto di riferimento convenzionale. Serve a indicare la quantità d’acqua presente 
+								nel bacino, ed è essenziale per monitorare la disponibilità di risorse idriche per garantirne un 
+								uso efficiente. Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di 
+								Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al 
+								periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli 
+								relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (Aprile 2022) 
+								e scendono al di sotto della media durante l’estate (Luglio, Agosto 2022).</p>
+						</div>
+						<div class="col-3"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row border_bottom">
+				<div class="col-6 d-flex align-items-center border_right padding-left">
+					<img class="w-50" src="img/legenda.svg">
+				</div>
+				<div class="col-6 p-0 d-flex justify-content-center align-items-center">
+					<p class="body-2">Dataset e guida alla lettura: Enti Regolatori dei Grandi Laghi</p>
+				</div>
+			</div>
+
+			<div class="row border_bottom">
+				<div class="col-7"></div>
+				<div class="col-5 p-0">
+					<div class="row">
+						<div class="col-4 button-anni active d-flex justify-content-center align-items-center border_right" id="portate_2021">
+							<p class="body-1">2021</p>
+						</div>
+						<div class="col-4 button-anni d-flex justify-content-center align-items-center border_right" id="portate_2022">
+							<p class="body-1">2022</p>
+						</div>
+						<div class="col-4 button-anni d-flex justify-content-center align-items-center border_right" id="portate_2023">
+							<p class="body-1">2023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row m-0 p-0 border_bottom container_laghi_indentikit">
+				<div class="col-6 padding-left padding-top-2 border_right">
+					<div class="row">
+						<div class="col-1"></div>
+						<div class="col-8">
+							<h3>Portata erogata</h3>
+							<p class="body-1">La portata erogata di un Lago viene calcolata da un'altezza misurata sul fiume a valle correlata con 
+							una scala di portata (o deflusso). I grafici mettono in correlazione la portata erogata e i livelli minimi di 
+							erogazione registrati negli anni 1946-2022 per il Lago di Como, per mettere in evidenza la quantità di acqua erogata 
+							rispetto ai minimi storici. Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi 
+							più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono 
+							ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (Aprile, Maggio 2022). 
+							è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (Gennaio, Febbraio 2023) 
+							e ancora inferiori nei mesi primaverili (Aprile, Maggio 2023).</p>
+						</div>
+						<div class="col-3"></div>
+					</div>
+				</div>
+				<div class="col-6">
+					<img class="laghi_img w-80" src="img/lago_maggiore_portate_2021.svg" alt="lago_maggiore_portate_erogate_2021">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6 d-flex align-items-center border_right padding-left">
+					<p class="body-1">Dataset e guida alla lettura: Enti Regolatori dei Grandi Laghi</p>
+				</div>
+				<div class="col-6 padding-left d-flex justify-content-center align-items-center">
+					<img class="w-100" src="img/legenda_portate_erogate_2021_lago_maggiore.svg">
+				</div>
+			</div>
+
+			<!-- 5. Back to top -->
+			<div class="row">
+				<div class="col-12 d-flex align-items-center border_top back_to_top"><a href="#header_grandi_laghi">BACK TO TOP</a></div>
+			</div>
+		</div>
+
+
+		<!-- APPROFONDIMENTI *********************************************************************** MEZZANINO -->
+		<div class="approfondimenti m-0" id="approfondimenti-4"> 
+
+			<div class="container-fluid m-0 p-0 container_title_mezzanino">
+				<!-- header -->
+				<div id="header_mezzanino" class="row m-0 approfondimenti_header border_bottom">
+					<!-- logo -->
+					<div class="col-1 d-flex justify-content-center border_right p-0 logo">
+						<a class="d-flex justify-content-center" href="index.html"><img src="img/logo.svg" alt="logo_sottosale"></a>
+					</div>
+		
+					<!-- tappa -->
+					<div class="col-10 d-flex align-items-center justify-content-center p-0 tappa">
+						<p class="tappa-approfondimenti" id="candia_mezzanino">MEZZANINO</p>
+					</div>
+					
+					<!-- close -->
+					<div class="col-1 d-flex justify-content-center border_left p-0 close">
+						<img class="close_default" src="img/close.svg" alt="close">
+						<img class="close_hover" src="img/close_hover.svg" alt="close">
+					</div>
+				</div>
+
+				<!-- 2. titolo -->
+				<div class="row m-0 padding-top">
+					<div class="col-1"></div>
+					<div class="col-11 d-flex align-items-center p-0">
+						<h2>IL PI GRECO</h2>
+					</div>               
+				</div>
+			</div>
+            
+			<div class="row border_bottom padding-top">
+				<div class="col-2"></div>
+				<div class="col-8 d-flex align-items-center container-testi">
+					<p class="body-1">Come un “dio capriccioso” (Gianni Brera, Patrum Padum, 1963), il Po a Mezzanino inizia il 
+						suo corso irregolare. Numerose sono le interpretazioni della cosiddetta sinuosità dei Fiumi, compreso il Po, 
+						che si interrogano sul rapporto tra mondo naturale e natura umana: il risultato, è un interessante connubio 
+						tra scienza e poesia,  razionale e irrazionale, che ispira alcuni testi letterari di fine Novecento. La 
+						sinuosità di un fiume si calcola tenendo in considerazione la lunghezza effettiva di un fiume, dalla fonte 
+						alla foce, e la lunghezza del percorso diretto tra questi due punti e, secondo studi condotti nel Novecento, 
+						la media di sinuosità di tutti i fiumi del mondo è di circa 3,14, approssimazione di Pi greco.
+					</p>
+				</div>
+				<div class="col-2"></div>
+			</div>
+
+			<div class="row citazioni-approfondimenti-2 white">
+				<div class="col-1"></div>
+				<div class="col-7 d-flex align-items-center">
+                    <h2>“ Il Po è un sacramento di fiume incostante e capriccioso</h2>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-2"></div>
+				<div class="col-6">
+					<p class="body-2">Nasce dal Monviso da un antro che pare giusto la matrice d’un animale mostruoso; arriva a Saluzzo 
+					e prende bruscamente a salire verso Torino: qui aggira nuove colline e riceve le Dore, mettendosi a correre 
+					sbadato da un sabbione all’altro. Diventa un po’ più rispettabile ricevendo il Ticino, la cui parte cerulea 
+					si distingue dal resto per una buona ventina di chilometri […] Dopo l’amplesso con il Ticino Padre Po rincoglionisce 
+					letteralmente e assume l’aspetto di un inquieto serpentone dalle larghe ed inutili spire: Che cosa succede in effetti? 
+					Questo: che da vero vagabondo ubriaco si butta ora contro una riva ora contro un’altra: se trova molle corrode e porta 
+					via; se trova duro […] il filo di corrente piega con un largo giro contro la riva opposta e si scava un nuovo letto 
+					abbandonando quello precedente: ma qui, per una stranezza che gli è propria, Po si lascia dietro fondali bassi che 
+					fanno mollente e paiono larghi: queste morte si chiamano lanche […] Certo il Po è ozioso di troppe anse inutili; 
+					filasse dritto sarebbe poco più lungo della sua metà.</p>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row background_blu white">
+				<div class="col-8"></div>
+				<div class="col-1 ">
+					<h2 class="quotes_chiusura">”</h2>
+				</div>
+				<div class="col-3"></div>
+			</div>
+
+			<div class="row background_blu white citazioni-approfondimenti-2_2">
+				<div class="col-1"></div>
+				<div class="col-10">
+					<h3>GIANNI BRERA / PATRUM PADUM / 1963</h3>
+				</div>
+				<div class="col-1"></div>
+			</div>
+
+			<!-- 5. Back to top -->
+			<div class="row">
+				<div class="col-12 d-flex align-items-center border_top back_to_top"><a href="#header_mezzanino">BACK TO TOP</a></div>
+			</div>
+		</div>
+
+
+		<!-- APPROFONDIMENTI *********************************************************************** PIACENZA -->
+		<div class="approfondimenti m-0" id="approfondimenti-5"> 
+
+			
+			<!-- header -->
+			<div id="header_piacenza" class="row m-0 approfondimenti_header border_bottom">
+				<!-- logo -->
+				<div class="col-1 d-flex justify-content-center border_right p-0 logo">
+					<a class="d-flex justify-content-center" href="index.html"><img src="img/logo.svg" alt="logo_sottosale"></a>
+				</div>
+	
+				<!-- tappa -->
+				<div class="col-10 d-flex align-items-center justify-content-center p-0 tappa">
+					<p class="tappa-approfondimenti" id="candia_piacenza">PIACENZA</p>
+				</div>
+				
+				<!-- close -->
+				<div class="col-1 d-flex justify-content-center border_left p-0 close">
+					<img class="close_default" src="img/close.svg" alt="close">
+					<img class="close_hover" src="img/close_hover.svg" alt="close">
+				</div>
+			</div>
+
+			<!-- 2. titolo -->
+			<div class="row m-0 padding-top">
+				<div class="col-1"></div>
+				<div class="col-11 d-flex align-items-center p-0">
+					<h2>IL PO HA SETE</h2>
+				</div>               
+			</div>
+            
+			<div class="row border_bottom padding-top">
+				<div class="col-12">
+					<img class="w-100" src="img/Piacenza.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-6 d-flex align-items-center padding-top-2">
+					<p class="body-1">La ripresa fatta dal satellite Sentinel-2 di Copernicus – il programma di osservazione 
+					gestito dall’ESA e dalla Commissione Europea – mostra chiaramente il calo della portata idrica del Po. 
+					La stessa porzione di fiume viene confrontata, durante la metà di giugno, nel triennio 2020 - 2022. 
+					Dalle immagini è evidente come la continua siccità sta formando delle vere e proprie spiagge lungo gli argini. 
+					Dove una volta il Po sarebbe arrivato sopra le nostre teste, ad oggi rimane solamente una distesa arida: il 
+					letto del fiume in alcune zone è diventato completamente asciutto, arrivando a -3.3 metri rispetto lo zero 
+					idrometrico. La mancanza d’acqua tipica del periodo estivo è diventata un fenomeno comune già nei primi mesi 
+					dell’anno. Luigi Bisi, presidente del Consorzio di Bonifica, è sconcertato raccontando il record negativo 
+					che il fiume più lungo d'Italia sta facendo registrare questo inverno: “al termine della stagione invernale 
+					la portata normale del fiume sarebbe di 1.000 metri cubi al secondo, ma si aggira sui 300 metri cubi al secondo”.
+					</p>
+				</div>
+				<div class="col-3"></div>
+			</div>
+
+			<div class="row border_top border_bottom margin-top-2">
+				<div class="col-7 d-flex align-items-center border_right padding-left">
+					<h3>Portate medie giornaliere (M**3/S)</h3>
+				</div>
+				<div class="col-5 p-0">
+					<div class="row">
+						<div class="col-4 button-anni active d-flex justify-content-center align-items-center border_right" id="portate_2021">
+							<p class="body-1">2021</p>
+						</div>
+						<div class="col-4 button-anni d-flex justify-content-center align-items-center border_right" id="portate_2022">
+							<p class="body-1">2022</p>
+						</div>
+						<div class="col-4 button-anni d-flex justify-content-center align-items-center border_right" id="portate_2023">
+							<p class="body-1">2023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row border_bottom">
+				<div class="col-3 padding-top padding-bottom d-flex align-items-center border_right padding-left">
+					<p class="body-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+					laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+					lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
+					molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
+					blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				</div>
+				<div class="col-9 pl-0 pr-0 d-flex justify-content-center align-items-center">
+					<img class="dataviz_piacenza" src="img/portate_piacenza_2021.svg">
+				</div>
+			</div>
+
+			<div class="row border_bottom">
+				<div class="col-6 d-flex align-items-center padding-left border_right">
+					<p class="p-fonti">
+						Fonti: ANBI
+					</p>
+				</div>
+				<div class="col-6 m-0">
+					<div class="row">
+						<div class="col-6 d-flex justify-content-center align-items-center">
+							<p class="p-fonti">Range di valori da un livello minimo a un livello massimo di portata:</p></div>
+						<div class="col-6 d-flex justify-content-center align-items-center">
+							<img class="w-50" src="img/legenda_portate_giornaliere.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-9 video">
+					<video width="320" height="240" controls>
+						<source src="video/02_Piacenza.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="col-3 fonti border_left">
+					<p class="p-fonti">Video di...</p>
+				</div>
+			</div>
+
+			<!-- 5. Back to top -->
+			<div class="row">
+				<div class="col-12 d-flex align-items-center border_top back_to_top"><a href="#header_piacenza">BACK TO TOP</a></div>
+			</div>
+		</div>
+
+		
+			
+		
+
+		<div class="button-next" data-next="2"> <!-- data-next="1"  per avere inizio senza Pian Del Re già selezionato-->
+			<img class="arrow_right" src="img/arrow_right.svg" alt="sucessivo">
+			<img src="img/arrow_right_hover.svg" alt="sucessivo">
+		</div>
+		<div class="button-prev" data-prev="1">
+			<img class="arrow_right" src="img/arrow_left.svg" alt="precedente">
+			<img src="img/arrow_left_hover.svg" alt="precedente">
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+		<script src="js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	 	</body>
+</html>
