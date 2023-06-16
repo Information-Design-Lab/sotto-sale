@@ -175,7 +175,6 @@ p.p-fonti{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    width: 100%;
     z-index: 0;
     padding: 0;
     margin: 0;
@@ -192,6 +191,7 @@ p.p-fonti{
 .abstract{
     margin-top: 80px;
 }
+
 .start{
     margin-top: 50px;
 }
@@ -689,6 +689,15 @@ p.p-fonti{
 
 
 
+
+
+
+
+
+
+
+
+
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) { 
@@ -748,13 +757,17 @@ p.p-fonti{
     }
 
     .start img{
-        width: 100%;
+        width: 50vw;
+        object-fit: contain;
     }
 
     .cartiglio{
         height: 30px;
         margin-top: 10vh;
     }    
+
+    /*************************************** elementi navigazione *******/
+    
     
 
 }
