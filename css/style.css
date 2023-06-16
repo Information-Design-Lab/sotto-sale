@@ -182,7 +182,6 @@ p.p-fonti{
 }
 
 .home{
-    height: 600px;
     margin-top: 140px;
 }
 
@@ -214,6 +213,7 @@ p.p-fonti{
 
 .cartiglio{
     height: 30px;
+    margin-top: 30vh;
 }
 
 
@@ -672,4 +672,89 @@ p.p-fonti{
 
 .dataviz_piacenza{
     width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) { 
+    /************************************** DS ****************/
+    h1 {
+        font-weight: bold;
+        font-size: 56px;
+    }
+    
+    h2 {
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 58px;
+    }
+    
+    h3 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 44px;
+    }
+    
+    /* BODY */
+    p.body-2{
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    p.body-1{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    /* SUB */
+    p.tappa-approfondimenti{
+        font-weight: normal;
+        font-size: 16px;
+    }
+    
+    p.p-fonti{
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    /**************************************** homepage xs ****************/
+    .home{
+        margin-top: 90px;
+    }
+    
+    .abstract{
+        margin-top: 80px;
+    }
+    .start{
+        margin-top: 50px;
+        width: 20%;
+    }
+
+    .start img{
+        width: 100%;
+    }
+
+    .cartiglio{
+        height: 30px;
+        margin-top: 10vh;
+    }    
+    
+
 }
