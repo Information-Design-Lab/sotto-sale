@@ -97,6 +97,10 @@ p.p-fonti{
     background-color: #0047CC;
 }
 
+.background_white{
+    background-color: #F0F0F0;
+}
+
 .margin-top{
     margin-top: 60px;
 }
@@ -176,17 +180,22 @@ p.p-fonti{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
     z-index: 10;
 }
 
 .sfondo_homepage{
     position: fixed;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     z-index: 0;
     padding: 0;
     margin: 0;
+}
+
+.sfondo_homepage img{
+    width: 100vw;
+    object-fit: cover;
 }
 
 .home{
@@ -229,6 +238,10 @@ p.p-fonti{
     margin-top: 30vh;
 }
 
+.timer{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 
  /* ignore P default settings */
  p {
@@ -773,6 +786,8 @@ p.p-fonti{
 
     .work-in-progress{
         margin-top: 50px;
+        background-color: #F0F0F0;
+        padding: 10px;
     }
 
     .start{
