@@ -201,6 +201,10 @@ p.p-fonti{
     margin-top: 80px;
 }
 
+.work-in-progress{
+    margin-top: 50px;
+}
+
 .start{
     margin-top: 50px;
 }
@@ -766,6 +770,11 @@ p.p-fonti{
     .abstract{
         margin-top: 80px;
     }
+
+    .work-in-progress{
+        margin-top: 50px;
+    }
+
     .start{
         margin-top: 50px;
         width: 20%;
