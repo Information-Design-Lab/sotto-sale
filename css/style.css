@@ -52,6 +52,15 @@ h3 {
     padding: 0;
 }
 
+h4 {
+    font-family: 'PP Telegraf', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+}
+
 /* BODY */
 p.body-2{
     font-family: 'PP Telegraf', sans-serif;
@@ -717,6 +726,12 @@ p.p-fonti{
         font-weight: bold;
         font-size: 32px;
         line-height: 44px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
     }
     
     /* BODY */
