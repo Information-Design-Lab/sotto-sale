@@ -45,8 +45,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.70051 , ');
-        jQuery("#cartiglio_lng").text('7.09241');
+        jQuery("#cartiglio_lat").text('44.700 , ');
+        jQuery("#cartiglio_lng").text('7.0924');
         jQuery("#cartiglio_alt").text('2022');
         jQuery("#cartiglio_km").text('652');
         // map.getCenter().lng
@@ -70,8 +70,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.69229 , ');
-        jQuery("#cartiglio_lng").text('7.18842');
+        jQuery("#cartiglio_lat").text('44.692 , ');
+        jQuery("#cartiglio_lng").text('7.1884');
         jQuery("#cartiglio_alt").text('1250');
         jQuery("#cartiglio_km").text('644.5');
         jQuery(".button-prev").data("prev", 1);
@@ -93,8 +93,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.05445 , ');
-        jQuery("#cartiglio_lng").text('7.68676');
+        jQuery("#cartiglio_lat").text('45.054 , ');
+        jQuery("#cartiglio_lng").text('7.6867');
         jQuery("#cartiglio_alt").text('239');
         jQuery("#cartiglio_km").text('557');
         jQuery(".button-prev").data("prev", 2);
@@ -116,8 +116,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.17658 , ');
-        jQuery("#cartiglio_lng").text('8.59441');
+        jQuery("#cartiglio_lat").text('45.176 , ');
+        jQuery("#cartiglio_lng").text('8.5944');
         jQuery("#cartiglio_alt").text('102');
         jQuery("#cartiglio_km").text('477');
         jQuery(".button-prev").data("prev", 3);
@@ -162,8 +162,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.14486 , ');
-        jQuery("#cartiglio_lng").text('9.22857');
+        jQuery("#cartiglio_lat").text('45.144 , ');
+        jQuery("#cartiglio_lng").text('9.2285');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", 5);
@@ -185,8 +185,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('61');
         jQuery("#cartiglio_km").text('357');
         jQuery(".button-prev").data("prev", 6);
@@ -208,8 +208,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('47');
         jQuery("#cartiglio_km").text('312');
         jQuery(".button-prev").data("prev", 7);
@@ -231,8 +231,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.901870 , ');
-        jQuery("#cartiglio_lng").text('10.554287');
+        jQuery("#cartiglio_lat").text('44.901 , ');
+        jQuery("#cartiglio_lng").text('10.554');
         jQuery("#cartiglio_alt").text('23');
         jQuery("#cartiglio_km").text('252');
         jQuery(".button-prev").data("prev", 8);
@@ -254,8 +254,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.921152 , ');
-        jQuery("#cartiglio_lng").text('10.653998');
+        jQuery("#cartiglio_lat").text('44.921 , ');
+        jQuery("#cartiglio_lng").text('10.653');
         jQuery("#cartiglio_alt").text('24');
         jQuery("#cartiglio_km").text('242');
         jQuery(".button-prev").data("prev", 9);
@@ -277,8 +277,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.878386 , ');
-        jQuery("#cartiglio_lng").text('11.607543');
+        jQuery("#cartiglio_lat").text('44.878 , ');
+        jQuery("#cartiglio_lng").text('11.607');
         jQuery("#cartiglio_alt").text('9');
         jQuery("#cartiglio_km").text('132');
         jQuery(".button-prev").data("prev", 10);
@@ -335,8 +335,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.70051 , ');
-        jQuery("#cartiglio_lng").text('7.09241');
+        jQuery("#cartiglio_lat").text('44.700 , ');
+        jQuery("#cartiglio_lng").text('7.0924');
         jQuery("#cartiglio_alt").text('2022');
         jQuery("#cartiglio_km").text('0');
         jQuery(".card").removeClass("visible");
@@ -361,8 +361,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.69229 , ');
-        jQuery("#cartiglio_lng").text('7.18842');
+        jQuery("#cartiglio_lat").text('44.692 , ');
+        jQuery("#cartiglio_lng").text('7.1884');
         jQuery("#cartiglio_alt").text('1250');
         jQuery("#cartiglio_km").text('644.5');
         jQuery(".card").removeClass("visible");
@@ -387,8 +387,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.05445 , ');
-        jQuery("#cartiglio_lng").text('7.68676');
+        jQuery("#cartiglio_lat").text('45.054 , ');
+        jQuery("#cartiglio_lng").text('7.6867');
         jQuery("#cartiglio_alt").text('239');
         jQuery("#cartiglio_km").text('557');
         jQuery(".card").removeClass("visible");
@@ -413,8 +413,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.17658 , ');
-        jQuery("#cartiglio_lng").text('8.59441');
+        jQuery("#cartiglio_lat").text('45.176 , ');
+        jQuery("#cartiglio_lng").text('8.5944');
         jQuery("#cartiglio_alt").text('102');
         jQuery("#cartiglio_km").text('477');
         jQuery(".card").removeClass("visible");
@@ -465,8 +465,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.14486 , ');
-        jQuery("#cartiglio_lng").text('9.22857');
+        jQuery("#cartiglio_lat").text('45.144 , ');
+        jQuery("#cartiglio_lng").text('9.2285');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".card").removeClass("visible");
@@ -491,8 +491,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('61');
         jQuery("#cartiglio_km").text('357');
         jQuery(".card").removeClass("visible");
@@ -517,8 +517,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('47');
         jQuery("#cartiglio_km").text('312');
         jQuery(".card").removeClass("visible");
@@ -543,8 +543,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.901870 , ');
-        jQuery("#cartiglio_lng").text('10.554287');
+        jQuery("#cartiglio_lat").text('44.901 , ');
+        jQuery("#cartiglio_lng").text('10.554');
         jQuery("#cartiglio_alt").text('23');
         jQuery("#cartiglio_km").text('252');
         jQuery(".card").removeClass("visible");
@@ -569,8 +569,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.921152 , ');
-        jQuery("#cartiglio_lng").text('10.653998');
+        jQuery("#cartiglio_lat").text('44.921 , ');
+        jQuery("#cartiglio_lng").text('10.653');
         jQuery("#cartiglio_alt").text('24');
         jQuery("#cartiglio_km").text('242');
         jQuery(".card").removeClass("visible");
@@ -595,8 +595,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.878386 , ');
-        jQuery("#cartiglio_lng").text('11.607543');
+        jQuery("#cartiglio_lat").text('44.878 , ');
+        jQuery("#cartiglio_lng").text('11.607');
         jQuery("#cartiglio_alt").text('9');
         jQuery("#cartiglio_km").text('132');
         jQuery(".card").removeClass("visible");
@@ -659,8 +659,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.70051 , ');
-        jQuery("#cartiglio_lng").text('7.09241');
+        jQuery("#cartiglio_lat").text('44.700 , ');
+        jQuery("#cartiglio_lng").text('7.0924');
         jQuery("#cartiglio_alt").text('2022');
         jQuery("#cartiglio_km").text('0');
         jQuery(".button-prev").data("prev", prev);
@@ -682,8 +682,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.69229 , ');
-        jQuery("#cartiglio_lng").text('7.18842');
+        jQuery("#cartiglio_lat").text('44.692 , ');
+        jQuery("#cartiglio_lng").text('7.1884');
         jQuery("#cartiglio_alt").text('1250');
         jQuery("#cartiglio_km").text('644.5');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -705,8 +705,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.05445 , ');
-        jQuery("#cartiglio_lng").text('7.68676');
+        jQuery("#cartiglio_lat").text('45.054 , ');
+        jQuery("#cartiglio_lng").text('7.6867');
         jQuery("#cartiglio_alt").text('239');
         jQuery("#cartiglio_km").text('557');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -728,8 +728,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.17658 , ');
-        jQuery("#cartiglio_lng").text('8.59441');
+        jQuery("#cartiglio_lat").text('45.176 , ');
+        jQuery("#cartiglio_lng").text('8.5944');
         jQuery("#cartiglio_alt").text('102');
         jQuery("#cartiglio_km").text('477');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -774,8 +774,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.14486 , ');
-        jQuery("#cartiglio_lng").text('9.22857');
+        jQuery("#cartiglio_lat").text('45.144 , ');
+        jQuery("#cartiglio_lng").text('9.2285');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -797,8 +797,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('61');
         jQuery("#cartiglio_km").text('357');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -820,8 +820,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.053475 , ');
-        jQuery("#cartiglio_lng").text('9.694746');
+        jQuery("#cartiglio_lat").text('45.053 , ');
+        jQuery("#cartiglio_lng").text('9.6947');
         jQuery("#cartiglio_alt").text('47');
         jQuery("#cartiglio_km").text('312');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -843,8 +843,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.901870 , ');
-        jQuery("#cartiglio_lng").text('10.554287');
+        jQuery("#cartiglio_lat").text('44.901 , ');
+        jQuery("#cartiglio_lng").text('10.554');
         jQuery("#cartiglio_alt").text('23');
         jQuery("#cartiglio_km").text('252');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -866,8 +866,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.921152 , ');
-        jQuery("#cartiglio_lng").text('10.653998');
+        jQuery("#cartiglio_lat").text('44.921 , ');
+        jQuery("#cartiglio_lng").text('10.653');
         jQuery("#cartiglio_alt").text('24');
         jQuery("#cartiglio_km").text('242');
         jQuery(".button-prev").data("prev", prev - 1);
@@ -889,8 +889,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('44.878386 , ');
-        jQuery("#cartiglio_lng").text('11.607543');
+        jQuery("#cartiglio_lat").text('44.878 , ');
+        jQuery("#cartiglio_lng").text('11.607');
         jQuery("#cartiglio_alt").text('9');
         jQuery("#cartiglio_km").text('132');
         jQuery(".button-prev").data("prev", prev - 1);
