@@ -47,8 +47,7 @@ h2 {
 h3 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -57,28 +56,26 @@ h3 {
 p.body-2{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.5rem;
 }
 
 p.body-1{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.2rem;
 }
 
 /* SUB */
 p.tappa-approfondimenti{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 p.p-fonti{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .white{
@@ -120,15 +117,13 @@ p.p-fonti{
 .cartiglio p{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.2rem;
 }
 
 .cartiglio_mappa p{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
 }
 
   /* bordi griglie */
@@ -367,7 +362,7 @@ p.p-fonti{
 .card h3 {
     font-family: 'PP Telegraf';
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-left: 35px;
     margin-bottom: 12px;
     /* ignore default padding + 30px (center alignment) * /
@@ -378,8 +373,7 @@ p.p-fonti{
 .card .descrizione {   
     font-family: 'PP Telegraf';
     font-weight: normal;
-    line-height: 24px;
-    font-size: 18px;
+    line-height: 1.5rem;
     margin-bottom: 40px;
 }
 
@@ -387,7 +381,7 @@ p.p-fonti{
 .pin{
     position: absolute;
     width: 23px;
-    margin-top: 330px;
+    margin-top: 323px;
     z-index: 12;
 }
 
