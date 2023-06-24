@@ -2,6 +2,11 @@
 var next;
 var prev;
 var id = 2;
+let Ostana_audio = document.getElementById("Ostana_audio");
+let Torino_audio = document.getElementById("Torino_audio");
+let Guastalla_audio = document.getElementById("Guastalla_audio");
+
+
 
 var eventi = {
     Stile_Mappa: { "satellite": false }, 
@@ -47,6 +52,16 @@ map.on('click', (event) => {
         // map.getCenter().lng
         jQuery(".button-prev").data("prev", 1);
         jQuery(".button-next").data("next", 2);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
     }
     /************************************************* Ostana **********/
     if (id == 2) {
@@ -61,6 +76,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('644.5');
         jQuery(".button-prev").data("prev", 1);
         jQuery(".button-next").data("next", 3);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Ostana_audio').animate({volume: 1}, 1000);
+		Ostana_audio.play();
     }
     /************************************************* Torino **********/
     if (id == 3) {
@@ -75,6 +99,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('557');
         jQuery(".button-prev").data("prev", 2);
         jQuery(".button-next").data("next", 4);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 1}, 1000);
+        Torino_audio.play();
     }
     /************************************************* Candia Lomellina **********/
     if (id == 4) {
@@ -89,6 +122,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('477');
         jQuery(".button-prev").data("prev", 3);
         jQuery(".button-next").data("next", 5);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (id == 5) {
@@ -103,6 +145,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('/');
         jQuery(".button-prev").data("prev", 4);
         jQuery(".button-next").data("next", 6);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (id == 6) {
@@ -117,6 +168,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", 5);
         jQuery(".button-next").data("next", 7);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (id == 7) {
@@ -131,6 +191,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('357');
         jQuery(".button-prev").data("prev", 6);
         jQuery(".button-next").data("next", 8);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Cremona **********/
     if (id == 8) {
@@ -145,6 +214,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('312');
         jQuery(".button-prev").data("prev", 7);
         jQuery(".button-next").data("next", 9);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Boretto **********/
     if (id == 9) {
@@ -159,6 +237,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('252');
         jQuery(".button-prev").data("prev", 8);
         jQuery(".button-next").data("next", 10);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (id == 10) {
@@ -173,6 +260,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('242');
         jQuery(".button-prev").data("prev", 9);
         jQuery(".button-next").data("next", 11);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
+        Guastalla_audio.play();
     }
     /************************************************* Pontelagoscuro **********/
     if (id == 11) {
@@ -187,6 +283,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('132');
         jQuery(".button-prev").data("prev", 10);
         jQuery(".button-next").data("next", 12);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Delta **********/
     if (id == 12) {
@@ -201,6 +306,15 @@ map.on('click', (event) => {
         jQuery("#cartiglio_km").text('0');
         jQuery(".button-prev").data("prev", 11);
         jQuery(".button-next").data("next", 12);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
 });
 
@@ -230,6 +344,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 1);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Ostana **********/
     if (next == 2) {
@@ -247,6 +370,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 1);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Ostana_audio').animate({volume: 1}, 1000);
+        Ostana_audio.play();
     }
     /************************************************* Torino **********/
     if (next == 3) {
@@ -264,6 +396,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 2);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 1}, 1000);
+        Torino_audio.play();
     }
     /************************************************* Candia Lomellina **********/
     if (next == 4) {
@@ -281,6 +422,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 3);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (next == 5) {
@@ -298,6 +448,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 4);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (next == 6) {
@@ -315,6 +474,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", id + 1);
         jQuery(".button-prev").data("prev", 5);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (next == 7) {
@@ -332,6 +500,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 6);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Cremona **********/
     if (next == 8) {
@@ -349,6 +526,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 7);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Boretto **********/
     if (next == 9) {
@@ -366,6 +552,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 8);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (next == 10) {
@@ -383,6 +578,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 9);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
+        Guastalla_audio.play();
     }
     /************************************************* Pontelagoscuro **********/
     if (next == 11) {
@@ -400,6 +604,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 10);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Delta **********/
     if (next == 12) {
@@ -417,6 +630,15 @@ jQuery(".button-next").click(function(){
         //jQuery(this).data("next", 1);
         jQuery(".button-prev").data("prev", 11);
         jQuery(".button-next").data("next", next + 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
 });
 
@@ -443,6 +665,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('0');
         jQuery(".button-prev").data("prev", prev);
         jQuery(".button-next").data("next", 2);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Ostana **********/
     if (prev == 2) {
@@ -457,6 +688,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('644.5');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 3);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Ostana_audio').animate({volume: 1}, 1000);
+        Ostana_audio.play();
     }
     /************************************************* Torino **********/
     if (prev == 3) {
@@ -471,6 +711,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('557');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 4);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 1}, 1000);
+        Torino_audio.play();
     }
     /************************************************* Candia Lomellina **********/
     if (prev == 4) {
@@ -485,6 +734,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('477');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 5);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (prev == 5) {
@@ -499,6 +757,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('/');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 6);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (prev == 6) {
@@ -513,6 +780,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 7);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (prev == 7) {
@@ -527,6 +803,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('357');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 8);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Cremona **********/
     if (prev == 8) {
@@ -541,6 +826,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('312');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 9);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Boretto **********/
     if (prev == 9) {
@@ -555,6 +849,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('252');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 10);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (prev == 10) {
@@ -569,6 +872,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('242');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 11);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
+        Guastalla_audio.play();
     }
     /************************************************* Pontelagoscuro **********/
     if (prev == 11) {
@@ -583,6 +895,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('132');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 12);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
     /************************************************* Delta **********/
     if (prev == 12) {
@@ -597,6 +918,15 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_km").text('0');
         jQuery(".button-prev").data("prev", prev - 1);
         jQuery(".button-next").data("next", 12);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Ostana_audio').pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Torino_audio').pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){('#Guastalla_audio').pause()},1000);
     }
 });
 
