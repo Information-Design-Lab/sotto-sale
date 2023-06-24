@@ -944,7 +944,7 @@ jQuery(".approfondimenti .close").click(function(){
 
 // CLICK SUL BOTTONE SATELLITE
 
-jQuery("#button_satellite").click(function(){
+jQuery(".satellite_off").click(function(){
     if(eventi.Stile_Mappa.satellite === false){
         map.setStyle('mapbox://styles/martamezzetti/cliwwaowq00m801p75ssrc43u')
         eventi.Stile_Mappa.satellite = true;
@@ -955,7 +955,10 @@ jQuery("#button_satellite").click(function(){
         jQuery(".cartiglio_mappa div.last_div").addClass("border_right_w")
         jQuery(".idrografica_off").addClass("visible")
         jQuery(".satellite_off").removeClass("visible")
-    } else{
+    } 
+});
+jQuery(".idrografica_off").click(function(){
+    if(eventi.Stile_Mappa.satellite){
         map.setStyle('mapbox://styles/martamezzetti/clivumhbo00jj01qyakm16o9r')
         eventi.Stile_Mappa.satellite = false;
         jQuery("#logo_w").removeClass("visible")
@@ -966,5 +969,4 @@ jQuery("#button_satellite").click(function(){
         jQuery(".satellite_off").addClass("visible")
         jQuery(".idrografica_off").removeClass("visible")
     }
-    
 });

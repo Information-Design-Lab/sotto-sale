@@ -257,6 +257,7 @@ p.p-fonti{
 
 .satellite_off{
     position:absolute;
+    z-index: 10;
     opacity: 0;
 }
 
@@ -270,6 +271,7 @@ p.p-fonti{
 
 .idrografica_off{
     position:absolute;
+    z-index: 10;
     opacity: 0;
 }
 
@@ -354,7 +356,7 @@ p.p-fonti{
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 76.25%;
+    padding-top: 75%;
     background-color: #F0F0F0;
     z-index: 11;
     margin-bottom: 28px;
