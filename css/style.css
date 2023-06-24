@@ -439,7 +439,7 @@ p.p-fonti{
 
 .arrow{
     position: absolute;
-    margin-top: 7px;
+    margin-top: 15px;
     opacity: 1;
 }
 
@@ -660,6 +660,12 @@ p.p-fonti{
     object-fit: fill;
 }
 
+.tabella_laghi{
+    height: 12.5%;
+    display: flex;
+    align-items: center;
+}
+
 /************* Approfondimento Piacenza *************/
 
 .button-anni{
@@ -770,21 +776,49 @@ p.p-fonti{
     }    
 
     /*************************************** elementi navigazione *******/
-    
+
+    #logo_su_mappa{
+        width: 30px;
+        left: 20px;
+        top: 30px;
+    }
+
+    #button_satellite{
+        height: 30px;
+        position: fixed;
+        right: 20px;
+        top: 30px;
+    }
+
+    #button_credits{
+        display: none;
+    }
+
     .button-next {
         width: 35px;
-        right: 30px;
+        right: 20px;
         bottom: 50px;
     }
     
     .button-prev {
         width: 35px;
-        left: 30px;
+        left: 20px;
         bottom: 50px;
     }
 
     .arrow{
         margin-top: 17px;
+    }
+
+    .cartiglio_mappa{
+        display: none !important;
+    }
+
+    .card{
+        width: 60vw;
+        padding: 10px;
+        border: 2px solid black;
+        top: 100px;
     }
 
 }
