@@ -437,25 +437,16 @@ p.p-fonti{
     cursor: pointer;
 }
 
-.arrow_left{
+.arrow{
     position: absolute;
     margin-top: 7px;
     opacity: 1;
 }
 
-.arrow_left:hover{
+.arrow:hover{
     opacity: 0;
 }
 
-.arrow_right{
-    position: absolute;
-    margin-top: 7px;
-    opacity: 1;
-}
-
-.arrow_right:hover{
-    opacity: 0;
-}
 
 /* RIGHE approfondimenti 1 */
 .approfondimenti {
@@ -780,6 +771,20 @@ p.p-fonti{
 
     /*************************************** elementi navigazione *******/
     
+    .button-next {
+        width: 35px;
+        right: 30px;
+        bottom: 50px;
+    }
     
+    .button-prev {
+        width: 35px;
+        left: 30px;
+        bottom: 50px;
+    }
+
+    .arrow{
+        margin-top: 17px;
+    }
 
 }
