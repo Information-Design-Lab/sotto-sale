@@ -31,7 +31,7 @@ body,html {
 h1 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
-    font-size: 56px;
+    font-size: 3.5rem;
     margin: 0;
     padding: 0;
 }
@@ -39,8 +39,7 @@ h1 {
 h2 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
-    font-size: 56px;
-    line-height: 58px;
+    font-size: 3.5rem;
     margin: 0;
     padding: 0;
 }
@@ -526,27 +525,31 @@ p.p-fonti{
     padding-top: 60px;
 }
 
-.video{
+.container_video{
     position: relative;
-    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-.video video {
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .citazione-approfondimenti-1{
-    background-color: #0047CC;
-    color: #F0F0F0;
-    padding: 80px;
+    padding: 100px;
 }
 
 .articolo-approfondimenti-1{
     padding-top: 110px;
     padding-left: 80px;
-    padding-right: 80px;
+    padding-right: 120px;
     padding-bottom: 80px;
 }
 
