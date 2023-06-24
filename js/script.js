@@ -162,8 +162,8 @@ map.on('click', (event) => {
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.144860 , ');
-        jQuery("#cartiglio_lng").text('9.228572');
+        jQuery("#cartiglio_lat").text('45.14486 , ');
+        jQuery("#cartiglio_lng").text('9.22857');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", 5);
@@ -465,8 +465,8 @@ jQuery(".button-next").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.144860 , ');
-        jQuery("#cartiglio_lng").text('9.228572');
+        jQuery("#cartiglio_lat").text('45.14486 , ');
+        jQuery("#cartiglio_lng").text('9.22857');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".card").removeClass("visible");
@@ -774,8 +774,8 @@ jQuery(".button-prev").click(function(){
             essential: true,
             zoom: 12
         });
-        jQuery("#cartiglio_lat").text('45.144860 , ');
-        jQuery("#cartiglio_lng").text('9.228572');
+        jQuery("#cartiglio_lat").text('45.14486 , ');
+        jQuery("#cartiglio_lng").text('9.22857');
         jQuery("#cartiglio_alt").text('62');
         jQuery("#cartiglio_km").text('412');
         jQuery(".button-prev").data("prev", prev - 1);
