@@ -6,11 +6,14 @@ let Ostana_audio = document.getElementById("Ostana_audio");
 let Torino_audio = document.getElementById("Torino_audio");
 let Guastalla_audio = document.getElementById("Guastalla_audio");
 
-
+var laghi = [ "lago_maggiore", "lago_como", "lago_iseo", "lago_garda"];
 
 var eventi = {
     Stile_Mappa: { "satellite": false }, 
-    Laghi_anni: { "2021": true, "2022": false, "2023": false },
+    lago_maggiore: { stato: "attivo", regioni: "Piemonte, Lombardia, Ticino", superficie: 212, volume: 37, profondità_massima: 372, profondità_media: 200, immissari_principali: "Ticino, Maggia, Toce, Tresa", emissari_principali: "Ticino" },
+    lago_como: { stato: "spento", regioni: "Lombardia", superficie: 145, volume: 23.37, profondità_massima: 412, profondità_media: 161, immissari_principali: "Adda, Mera, Fiumelatte, Pioverna, Cosia, Liro, Livo, Albano, Telo, Breggia, Varrone, Gerenzone, Caldone", emissari_principali: "Adda" },
+    lago_iseo: { stato: "spento", regioni: "Lombardia", superficie: 65.3, volume: 8.09, profondità_massima: 256, profondità_media: "/", immissari_principali: "Oglio, Borlezza", emissari_principali: "Oglio" },
+    lago_garda: { stato: "spento", regioni: "Lombardia, Veneto, Trentino - Alto Adige", superficie: 368, volume: 49, profondità_massima: 346, profondità_media: 133, immissari_principali: "Sarca", emissari_principali: "Mincio" }
 };
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFydGFtZXp6ZXR0aSIsImEiOiJjbGh0MHM0ZmowNnA4M2puMzdxdDA4a3VsIn0.3ANiEbNc0KJWDpT8raXhuw';
@@ -969,4 +972,81 @@ jQuery(".idrografica_off").click(function(){
         jQuery(".satellite_off").addClass("visible")
         jQuery(".idrografica_off").removeClass("visible")
     }
+});
+
+// CLICK BOTTONE LAGHI --> selezionare lago 
+
+jQuery("#lago_maggiore").click(function(){
+    if(eventi.lago_maggiore.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_maggiore.stato = "attivo";
+        jQuery("#lago_maggiore").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_maggiore.regioni);
+        jQuery(".superficie").text(eventi.lago_maggiore.superficie);
+        jQuery(".volume").text(eventi.lago_maggiore.volume);
+        jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
+        jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_maggiore.jpeg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+    } 
+});
+jQuery("#lago_como").click(function(){
+    if(eventi.lago_como.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_como.stato = "attivo";
+        jQuery("#lago_como").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_como.regioni);
+        jQuery(".superficie").text(eventi.lago_como.superficie);
+        jQuery(".volume").text(eventi.lago_como.volume);
+        jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
+        jQuery(".immissari").text(eventi.lago_como.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_como.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_como.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+    } 
+});
+jQuery("#lago_iseo").click(function(){
+    if(eventi.lago_iseo.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_iseo.stato = "attivo";
+        jQuery("#lago_iseo").addClass("active");
+    } 
+});
+jQuery("#lago_garda").click(function(){
+    if(eventi.lago_garda.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_garda.stato = "attivo";
+        jQuery("#lago_garda").addClass("active");
+    } 
 });
