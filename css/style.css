@@ -32,24 +32,24 @@ h1 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
     font-size: 3.5rem;
-    margin: 0;
-    padding: 0;
 }
 /* TITOLI PAGINE + CITAZIONE GRANDE*/
 h2 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
     font-size: 3.5rem;
-    margin: 0;
-    padding: 0;
 }
 /* TESTI GRANDI MEDIA */
 h3 {
     font-family: 'PP Telegraf', sans-serif;
     font-weight: bold;
     font-size: 2rem;
-    margin: 0;
-    padding: 0;
+}
+/* TITOLI DATAVIZ */
+h4 {
+    font-family: 'PP Telegraf', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* BODY */
@@ -418,7 +418,7 @@ p.p-fonti{
 
 .button-next {
     position: fixed;
-    width: 40px;
+    width: 45px;
     right: 60px;
     bottom: 50px;
     font-size: 40px;
@@ -428,7 +428,7 @@ p.p-fonti{
 }
 .button-prev {
     position: fixed;
-    width: 40px;
+    width: 45px;
     left: 60px;
     bottom: 50px;
     font-size: 40px;
@@ -439,7 +439,7 @@ p.p-fonti{
 
 .arrow{
     position: absolute;
-    margin-top: 15px;
+    margin-top: 12.5px;
     opacity: 1;
 }
 
