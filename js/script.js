@@ -2,9 +2,6 @@
 var next;
 var prev;
 var id = 2;
-let Ostana_audio = document.getElementById("Ostana_audio");
-let Torino_audio = document.getElementById("Torino_audio");
-let Guastalla_audio = document.getElementById("Guastalla_audio");
 
 var laghi = [ "lago_maggiore", "lago_como", "lago_iseo", "lago_garda"];
 
@@ -29,6 +26,10 @@ const map = new mapboxgl.Map({
 /* CLICK SUI MARKER */
 
 map.on('click', (event) => {
+    let Ostana_audio = document.getElementById("Ostana_audio");
+    let Torino_audio = document.getElementById("Torino_audio");
+    let Guastalla_audio = document.getElementById("Guastalla_audio");
+
     const features = map.queryRenderedFeatures(event.point, {
         layers: ['tappe-fiume-po-sottosale'] 
     });
@@ -57,13 +58,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 2);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
     }
     /************************************************* Ostana **********/
@@ -81,10 +82,10 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 3);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Ostana_audio').animate({volume: 1}, 1000);
 		Ostana_audio.play();
@@ -104,10 +105,10 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 4);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 1}, 1000);
         Torino_audio.play();
@@ -127,13 +128,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 5);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (id == 5) {
@@ -150,13 +151,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 6);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (id == 6) {
@@ -173,13 +174,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 7);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (id == 7) {
@@ -196,13 +197,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 8);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Cremona **********/
     if (id == 8) {
@@ -219,13 +220,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 9);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Boretto **********/
     if (id == 9) {
@@ -242,13 +243,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 10);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (id == 10) {
@@ -265,10 +266,10 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 11);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
         Guastalla_audio.play();
@@ -288,13 +289,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 12);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Delta **********/
     if (id == 12) {
@@ -311,13 +312,13 @@ map.on('click', (event) => {
         jQuery(".button-next").data("next", 12);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
 });
 
@@ -328,6 +329,9 @@ jQuery(".card .close").on("click", function(){
 /* BOTTONE NEXT */
 
 jQuery(".button-next").click(function(){
+    let Ostana_audio = document.getElementById("Ostana_audio");
+    let Torino_audio = document.getElementById("Torino_audio");
+    let Guastalla_audio = document.getElementById("Guastalla_audio");
     next = jQuery(this).data("next");
     // console.log("prev: " + prev +  "id: " + id + " next: " + next);
     // id = next;
@@ -349,13 +353,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Ostana **********/
     if (next == 2) {
@@ -375,10 +379,10 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Ostana_audio').animate({volume: 1}, 1000);
         Ostana_audio.play();
@@ -401,10 +405,10 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 1}, 1000);
         Torino_audio.play();
@@ -427,13 +431,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (next == 5) {
@@ -453,13 +457,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (next == 6) {
@@ -479,13 +483,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (next == 7) {
@@ -505,13 +509,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Cremona **********/
     if (next == 8) {
@@ -531,13 +535,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Boretto **********/
     if (next == 9) {
@@ -557,13 +561,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (next == 10) {
@@ -583,10 +587,10 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
         Guastalla_audio.play();
@@ -609,13 +613,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Delta **********/
     if (next == 12) {
@@ -635,13 +639,13 @@ jQuery(".button-next").click(function(){
         jQuery(".button-next").data("next", next + 1);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
 });
 
@@ -649,6 +653,9 @@ jQuery(".button-next").click(function(){
 /* BOTTONE PREV */
 
 jQuery(".button-prev").click(function(){
+    let Ostana_audio = document.getElementById("Ostana_audio");
+    let Torino_audio = document.getElementById("Torino_audio");
+    let Guastalla_audio = document.getElementById("Guastalla_audio");
     prev = jQuery(this).data("prev");
     jQuery(".card").removeClass("visible");
     // id = next - 1;
@@ -670,13 +677,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 2);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Ostana **********/
     if (prev == 2) {
@@ -693,10 +700,10 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 3);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Ostana_audio').animate({volume: 1}, 1000);
         Ostana_audio.play();
@@ -716,10 +723,10 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 4);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 1}, 1000);
         Torino_audio.play();
@@ -739,13 +746,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 5);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Grandi Laghi **********/
     if (prev == 5) {
@@ -762,13 +769,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 6);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Mezzanino **********/
     if (prev == 6) {
@@ -785,13 +792,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 7);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Piacenza **********/
     if (prev == 7) {
@@ -808,13 +815,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 8);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Cremona **********/
     if (prev == 8) {
@@ -831,13 +838,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 9);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Boretto **********/
     if (prev == 9) {
@@ -854,13 +861,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 10);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Guastalla **********/
     if (prev == 10) {
@@ -877,10 +884,10 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 11);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 1}, 1000);
         Guastalla_audio.play();
@@ -900,13 +907,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 12);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
     /************************************************* Delta **********/
     if (prev == 12) {
@@ -923,13 +930,13 @@ jQuery(".button-prev").click(function(){
         jQuery(".button-next").data("next", 12);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Ostana_audio').pause()},1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
 
         jQuery('#Torino_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Torino_audio').pause()},1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
 
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
-        setTimeout(function(){('#Guastalla_audio').pause()},1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
     }
 });
 
@@ -1036,6 +1043,19 @@ jQuery("#lago_iseo").click(function(){
         }
         eventi.lago_iseo.stato = "attivo";
         jQuery("#lago_iseo").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_iseo.regioni);
+        jQuery(".superficie").text(eventi.lago_iseo.superficie);
+        jQuery(".volume").text(eventi.lago_iseo.volume);
+        jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
+        jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_iseo.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
     } 
 });
 jQuery("#lago_garda").click(function(){
@@ -1048,5 +1068,18 @@ jQuery("#lago_garda").click(function(){
         }
         eventi.lago_garda.stato = "attivo";
         jQuery("#lago_garda").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_garda.regioni);
+        jQuery(".superficie").text(eventi.lago_garda.superficie);
+        jQuery(".volume").text(eventi.lago_garda.volume);
+        jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
+        jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_garda.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
     } 
 });
