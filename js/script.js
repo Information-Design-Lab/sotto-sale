@@ -322,9 +322,8 @@ map.on('click', (event) => {
     }
 });
 
-jQuery(".card .close").on("click", function(){
-    jQuery(".card").removeClass("visible");
-});
+
+
 
 /* BOTTONE NEXT */
 
@@ -948,6 +947,22 @@ jQuery(".scopri").click(function(){
     console.log("#approfondimenti-" + approfondimenti)
 });
 
+// CLICK CLOSE CARD
+
+jQuery(".card .close").on("click", function(){
+    jQuery(".card").removeClass("visible");
+
+    jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+    setTimeout(function(){Ostana_audio.pause()},1000);
+
+    jQuery('#Torino_audio').animate({volume: 0}, 1000);
+    setTimeout(function(){Torino_audio.pause()},1000);
+
+    jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+    setTimeout(function(){Guastalla_audio.pause()},1000);
+});
+
+// CLICK CLOSE APPROFONDIMENTI
 jQuery(".approfondimenti .close").click(function(){
     jQuery(".approfondimenti").removeClass("visible");
 });
