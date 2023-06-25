@@ -113,6 +113,10 @@ p.p-fonti{
     padding-bottom: 120px;
 }
 
+.no-wrap{
+    white-space: nowrap;
+}
+
 /* CARTIGLIO */
 .cartiglio p{
     font-family: 'PP Telegraf', sans-serif;
@@ -459,7 +463,7 @@ p.p-fonti{
 
     z-index: 11;
 
-    background-color: #fff;
+    background-color: #f0f0f0;
     opacity: 0;
 
     pointer-events: none;
@@ -674,6 +678,12 @@ p.p-fonti{
     height: 14.3%;
     display: flex;
     align-items: center;
+    padding-left: 40px;
+}
+
+.dataviz_img{
+    width: 100%;
+    padding-top: 60px;
 }
 
 /************* Approfondimento Piacenza *************/

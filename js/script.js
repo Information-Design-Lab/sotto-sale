@@ -998,6 +998,7 @@ jQuery(".idrografica_off").click(function(){
 
 // CLICK BOTTONE LAGHI --> selezionare lago 
 
+// ---------------------------------------------- LAGO MAGGIORE
 jQuery("#lago_maggiore").click(function(){
     if(eventi.lago_maggiore.stato == "spento"){
         for(var i=0; i<4; i++){
@@ -1021,8 +1022,24 @@ jQuery("#lago_maggiore").click(function(){
         $("<img>").attr("src", "img/lago_maggiore.jpeg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
+        
+        jQuery(".dataviz_img").remove();
+        $("<img>").attr("src", "img/lago_maggiore_altezze.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_altezze_laghi");
+
+        $("<img>").attr("src", "img/lago_maggiore_portate.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_portate_laghi");
     } 
 });
+
+// ---------------------------------------------- LAGO COMO
 jQuery("#lago_como").click(function(){
     if(eventi.lago_como.stato == "spento"){
         for(var i=0; i<4; i++){
@@ -1046,8 +1063,24 @@ jQuery("#lago_como").click(function(){
         $("<img>").attr("src", "img/lago_como.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
+        
+        jQuery(".dataviz_img").remove();
+        $("<img>").attr("src", "img/lago_como_altezze.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_altezze_laghi");
+
+        $("<img>").attr("src", "img/lago_como_portate.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_portate_laghi");
     } 
 });
+
+// ---------------------------------------------- LAGO ISEO
 jQuery("#lago_iseo").click(function(){
     if(eventi.lago_iseo.stato == "spento"){
         for(var i=0; i<4; i++){
@@ -1071,8 +1104,24 @@ jQuery("#lago_iseo").click(function(){
         $("<img>").attr("src", "img/lago_iseo.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
+        
+        jQuery(".dataviz_img").remove();
+        $("<img>").attr("src", "img/lago_iseo_altezze.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_altezze_laghi");
+
+        $("<img>").attr("src", "img/lago_iseo_portate.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_portate_laghi");
     } 
 });
+
+// ---------------------------------------------- LAGO GARDA
 jQuery("#lago_garda").click(function(){
     if(eventi.lago_garda.stato == "spento"){
         for(var i=0; i<4; i++){
@@ -1096,5 +1145,19 @@ jQuery("#lago_garda").click(function(){
         $("<img>").attr("src", "img/lago_garda.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
+        
+        jQuery(".dataviz_img").remove();
+        $("<img>").attr("src", "img/lago_garda_altezze.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_altezze_laghi");
+
+        $("<img>").attr("src", "img/lago_garda_portate.svg")
+                    .addClass("dataviz_img")
+                    .appendTo(".container_dataviz_portate_laghi");
     } 
 });
