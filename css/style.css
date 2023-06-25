@@ -711,7 +711,7 @@ p.p-fonti{
 
 .dataviz_img{
     width: 100%;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 /************* Approfondimento Piacenza *************/
@@ -722,6 +722,15 @@ p.p-fonti{
 
 .dataviz_piacenza{
     width: 80%;
+}
+
+.dataviz_legenda{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.dataviz_descrizione_piacenza{
+    padding-top: 30px;
 }
 
 
