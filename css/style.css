@@ -716,15 +716,8 @@ p.p-fonti{
 
 /************* Approfondimento Piacenza *************/
 
-.button-anni{
-    cursor: pointer;
-    height: 50px;
-    float: left;
-}
-
-.button-anni.active{
-    background-color: #0047CC;
-    color: #F0F0F0;
+.approfondimenti_piacenza{
+    padding: 100px;
 }
 
 .dataviz_piacenza{
