@@ -598,6 +598,24 @@ p.p-fonti{
     top:0;
 }
 
+.candia_lomellina_img_container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    top:0;
+}
+
+.candia_lomellina_img_container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #candia_lomellina{
     color: #F0F0F0;
 }
@@ -627,6 +645,16 @@ p.p-fonti{
     background-color: #0047CC;
     padding-top: 80px;
     padding-bottom: 140px;
+}
+
+.link_chora_media{
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+.link_chora_media:hover{
+    text-decoration: underline;
+    color: #F0F0F0;
 }
 
 /************* Approfondimento Grandi Laghi *************/
