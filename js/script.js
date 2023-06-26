@@ -1022,6 +1022,7 @@ jQuery("#lago_maggiore").click(function(){
         $("<img>").attr("src", "img/lago_maggiore.jpeg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
 
         jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
         jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
@@ -1063,6 +1064,7 @@ jQuery("#lago_como").click(function(){
         $("<img>").attr("src", "img/lago_como.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
 
         jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
         jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
@@ -1104,6 +1106,7 @@ jQuery("#lago_iseo").click(function(){
         $("<img>").attr("src", "img/lago_iseo.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
 
         jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
         jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
@@ -1145,6 +1148,7 @@ jQuery("#lago_garda").click(function(){
         $("<img>").attr("src", "img/lago_garda.jpg")
                     .addClass("laghi_img")
                     .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
 
         jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
         jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");

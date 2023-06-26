@@ -686,8 +686,9 @@ p.p-fonti{
     color: #F0F0F0;
 }
 
-.container_laghi_indentikit{
-    height: 700px;
+.fonti_laghi{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container_img_laghi{
