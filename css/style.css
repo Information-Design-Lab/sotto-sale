@@ -730,10 +730,33 @@ p.p-fonti{
 }
 
 .dataviz_descrizione_piacenza{
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
+/************* Approfondimento Cremona *************/
 
+.approfondimenti_cremona{
+    padding: 100px;
+}
+
+.dataviz_legenda_gif{
+    width: 100%;
+    padding-top: 40px;
+}
+
+/************* Approfondimento Boretto *************/
+
+.approfondimenti_boretto{
+    padding: 100px;
+}
+
+.dataviz_boretto{
+    width: 80%;
+}
+
+.dataviz_descrizione_boretto{
+    padding-top: 60px;
+}
 
 
 
