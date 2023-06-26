@@ -669,6 +669,32 @@ jQuery(".button-next").click(function(){
         jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
         setTimeout(function(){Guastalla_audio.pause()},1000);
     }
+    /************************************************* Installazione Ferrara **********/
+    if (next == 13) {
+        map.flyTo({
+            center: [11.607543, 44.878386], 	
+            essential: true,
+            zoom: 12
+        });
+        jQuery("#cartiglio_lat").text('44.878 , ');
+        jQuery("#cartiglio_lng").text('11.607');
+        jQuery("#cartiglio_alt").text('9');
+        jQuery("#cartiglio_km").text('132');
+        jQuery(".card").removeClass("visible");
+        jQuery(".card#card-" + next).addClass("visible");
+
+        jQuery(".button-prev").data("prev", 12);
+        jQuery(".button-next").data("next", 1);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
+    }
 });
 
 
@@ -695,7 +721,7 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_lng").text('7.0924');
         jQuery("#cartiglio_alt").text('2022');
         jQuery("#cartiglio_km").text('0');
-        jQuery(".button-prev").data("prev", prev);
+        jQuery(".button-prev").data("prev", 13);
         jQuery(".button-next").data("next", 2);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
@@ -949,7 +975,31 @@ jQuery(".button-prev").click(function(){
         jQuery("#cartiglio_alt").text('1');
         jQuery("#cartiglio_km").text('0');
         jQuery(".button-prev").data("prev", prev - 1);
-        jQuery(".button-next").data("next", 12);
+        jQuery(".button-next").data("next", 13);
+
+        jQuery('#Ostana_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Ostana_audio.pause()},1000);
+
+        jQuery('#Torino_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Torino_audio.pause()},1000);
+
+        jQuery('#Guastalla_audio').animate({volume: 0}, 1000);
+        setTimeout(function(){Guastalla_audio.pause()},1000);
+    }
+    /************************************************* Installazione Ferrara **********/
+    if (prev == 13) {
+        map.flyTo({
+            center: [11.607543, 44.878386], 	
+            essential: true,
+            zoom: 12
+        });
+        jQuery("#cartiglio_lat").text('44.878 , ');
+        jQuery("#cartiglio_lng").text('11.607');
+        jQuery("#cartiglio_alt").text('9');
+        jQuery("#cartiglio_km").text('132');
+
+        jQuery(".button-prev").data("prev", prev - 1);
+        jQuery(".button-next").data("next", 13);
 
         jQuery('#Ostana_audio').animate({volume: 0}, 1000);
         setTimeout(function(){Ostana_audio.pause()},1000);
