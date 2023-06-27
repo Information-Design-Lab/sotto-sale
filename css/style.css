@@ -2,7 +2,15 @@ body,html {
     margin: 0; 
     padding: 0;
     background-color: #F0F0F0;
+    overflow-x: hidden;
 }
+
+/* .row{
+    margin: 0; 
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+} */
 
 @font-face {
     font-family: 'PP Telegraf';
