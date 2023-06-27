@@ -203,7 +203,7 @@ p.p-fonti{
 }
 
 .home{
-    margin-top: 140px;
+    margin-top: 80px;
 }
 
 .logo_tipo{
@@ -233,9 +233,50 @@ p.p-fonti{
     cursor: pointer;
 }
 
+.installazione{
+    margin-top: 20px;
+}
+
+.installazione_default{
+    position: absolute;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.installazione_default:hover{
+    position: absolute;
+    opacity: 0;
+}
+
+.installazione_hover{
+    cursor: pointer;
+}
+
+
+.chi_siamo{
+    margin-top: 20px;
+}
+
+.chi_siamo_default{
+    position: absolute;
+    cursor: pointer;
+    opacity: 1;
+    width: 120px;
+}
+
+.chi_siamo_default:hover{
+    position: absolute;
+    opacity: 0;
+}
+
+.chi_siamo_hover{
+    cursor: pointer;
+    width: 120px;
+}
+
 .cartiglio{
     height: 30px;
-    margin-top: 30vh;
+    margin-top: 150px;
 }
 
 
