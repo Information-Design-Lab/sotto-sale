@@ -1040,6 +1040,11 @@ jQuery(".approfondimenti .close").click(function(){
     jQuery(".approfondimenti").removeClass("visible");
 });
 
+// CLICK CLOSE ABOUT
+jQuery(".about-2 .close").click(function(){
+    jQuery(".about-2").removeClass("visible");
+});
+
 // CLICK SUL BOTTONE SATELLITE
 
 jQuery(".satellite_off").click(function(){
@@ -1067,6 +1072,13 @@ jQuery(".idrografica_off").click(function(){
         jQuery(".satellite_off").addClass("visible")
         jQuery(".idrografica_off").removeClass("visible")
     }
+});
+
+
+// CLICK BOTTONE CHI SIAMO
+
+jQuery("#button_credits").click(function(){
+        jQuery(".about-2").addClass("visible");
 });
 
 // CLICK BOTTONE LAGHI --> selezionare lago 

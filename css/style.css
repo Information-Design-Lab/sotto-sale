@@ -33,6 +33,13 @@ body,html {
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'PP Telegraf';
+    src: url(../fonts/PPTelegraf_RegularSlanted.otf) format("opentype");
+    font-weight: normal;
+    font-style: italic;
+  }
+
   /* DESINGN SYSTEM */
 
 /* CITAZIONI */
@@ -90,6 +97,12 @@ p.p-fonti{
     font-family: 'PP Telegraf', sans-serif;
     font-weight: normal;
     font-size: 1rem;
+}
+
+.italic{
+    font-family: 'PP Telegraf', sans-serif;
+    font-weight: normal;
+    font-style: italic;
 }
 
 .white{
@@ -882,8 +895,30 @@ p.p-fonti{
     overflow:auto;
 }
 
+.about-2 {
+    position: fixed;
 
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
 
+    z-index: 11;
+
+    background-color: #f0f0f0;
+    opacity: 0;
+    
+    pointer-events: none;
+    transition: opacity 0.2s linear;
+    
+    padding:0;
+    overflow:auto;
+}
+
+.about-2.visible {
+opacity: 1;
+pointer-events: all;
+}
 
 
 
