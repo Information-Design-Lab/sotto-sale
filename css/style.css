@@ -339,6 +339,7 @@ p.p-fonti{
     position:absolute;
     z-index: 10;
     opacity: 0;
+    right: 120px;
 }
 
 .satellite_off.visible{
@@ -347,6 +348,11 @@ p.p-fonti{
 
 .satellite_off.visible:hover{
     opacity: 0;
+}
+
+.satellite_active{
+    position: absolute;
+    right: 120px;
 }
 
 .idrografica_off{
