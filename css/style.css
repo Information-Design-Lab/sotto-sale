@@ -124,6 +124,10 @@ p.p-fonti{
     padding-left: 60px;
 }
 
+.padding-right{
+    padding-right: 80px;
+}
+
 .padding-bottom{
     padding-bottom: 60px;
 }
@@ -816,6 +820,26 @@ p.p-fonti{
 
 
 
+
+
+
+
+
+/**************************************************************** About ********************/
+
+.about {
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #f0f0f0;
+
+    padding:0;
+    overflow:auto;
+}
 
 
 
