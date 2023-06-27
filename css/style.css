@@ -892,12 +892,32 @@ p.p-fonti{
     object-fit: cover;
 }
 
+.dataviz_img_delta{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.dataviz_slider_delta{
+    padding-right: 20px;
+    padding-left: 20px;
+} 
+
+#margin_control_prev{
+    margin-left: -70px;
+    padding: 0;
+}
+
+#margin_control_next{
+    margin-right: -70px;
+    padding: 0;
+}
 
 /********** SCROLL *************/
 
 .scrolly {
     position: relative;
     display: flex;
+    background-color: #0047CC;
 }
 
 .scrollable-column {

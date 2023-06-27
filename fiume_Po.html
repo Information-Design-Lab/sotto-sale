@@ -1684,43 +1684,45 @@
 				<div class="scrollable-column">
 					<div class="step" data-step="1">
 						<h4 class="padding-top-2">Confronto dei valori di salinità delle boe posizionate nel Delta</h4>
-						<img class="w-100" src="img/confronto_boe_2021.svg">
+						<div class="dataviz_img_delta">
+							<img class="w-100" src="img/confronto_boe_2021.svg">
+						</div>
 					</div>
 
 					<div class="step" data-step="2">
 						<h4 class="padding-top">Confronto dei valori di salinità del 2021 con la media storica</h4>
-						<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+						<div id="carouselExampleAutoplaying" class="carousel slide dataviz_slider_delta" data-bs-ride="carousel">
 							<div class="carousel-inner">
-							  <div class="carousel-item active" data-bs-interval="5000">
+							  <div class="carousel-item active" data-bs-interval="10000">
 								<img src="img/boa_scardovari_mare.svg" class="d-block w-100" alt="boa_scardovari_mare">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_scardovari_int.svg" class="d-block w-100" alt="boa_scardovari_interno">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_canarin.svg" class="d-block w-100" alt="boa_canarin">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_barbamarco.svg" class="d-block w-100" alt="boa_barbamarco">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_marinetta.svg" class="d-block w-100" alt="boa_marinetta">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_basson.svg" class="d-block w-100" alt="boa_basson">
 							  </div>
-							  <div class="carousel-item" data-bs-interval="5000">
+							  <div class="carousel-item" data-bs-interval="10000">
 								<img src="img/boa_vallona.svg" class="d-block w-100" alt="boa_vallona">
 							  </div>
-							</div><!-- 
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							  <span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-							  <span class="visually-hidden">Next</span>
-							</button> -->
+							</div>
+							<button id="margin_control_prev" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							  </button>
+							  <button id="margin_control_next" class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							  </button>
 						</div>
 					</div>
 				</div>				
