@@ -876,10 +876,22 @@ p.p-fonti{
     padding-top: 60px;
 }
 
+/**************************************************************** Installazione ********************/
 
 
+.installazione_pag {
+    position: fixed;
 
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
 
+    background-color: #f0f0f0;
+
+    padding:0;
+    overflow:auto;
+}
 
 
 
