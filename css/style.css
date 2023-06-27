@@ -901,11 +901,13 @@ p.p-fonti{
 }
 
 .scrollable-column {
-    width: 50vw;
+    width: 60vw;
+    background-color: #0047CC;
+    padding-right: 60px;
 }
 
 .sticky-column {
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     position: sticky;
     top: 0px;
@@ -916,9 +918,8 @@ p.p-fonti{
     background-color: #0047CC;
     color: #f0f0f0;
     height: 100vh;
+    padding: 0;
 }
-
-
 
 
 /**************************************************************** Installazione ********************/

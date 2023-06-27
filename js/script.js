@@ -1277,12 +1277,6 @@ function handleStepExit(response) {
 }
 
 function init() {
-    // set random padding for different step heights (not required)
-    step.forEach(function (step) {
-        var v = 100 + Math.floor((Math.random() * window.innerHeight) / 4);
-        step.style.padding = v + "px 0px";
-    });
-
     // 1. setup the scroller with the bare-bones options
     // 		this will also initialize trigger observations
     // 2. bind scrollama event handlers (this can be chained like below)
