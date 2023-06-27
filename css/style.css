@@ -893,6 +893,31 @@ p.p-fonti{
 }
 
 
+/********** SCROLL *************/
+
+.scrolly {
+    position: relative;
+    display: flex;
+}
+
+.scrollable-column {
+    width: 50vw;
+}
+
+.sticky-column {
+    width: 50vw;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    background-color: #0047CC;
+}
+
+.step {
+    background-color: #0047CC;
+    color: #f0f0f0;
+    height: 100vh;
+}
+
 
 
 
@@ -957,6 +982,26 @@ p.p-fonti{
 opacity: 1;
 pointer-events: all;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
