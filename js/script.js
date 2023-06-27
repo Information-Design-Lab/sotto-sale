@@ -1293,3 +1293,13 @@ function init() {
 
 // kick things off
 init();
+
+// INTERAZIONI DATAVIZ DELTA
+
+$('.boa_traccia').hover(
+    function(){
+        $('.boa_traccia').removeClass("selezionata");
+        id = jQuery(this).data("boa");
+		$('#' + id).addClass("selezionata");
+	}
+);

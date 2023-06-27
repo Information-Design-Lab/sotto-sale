@@ -912,6 +912,36 @@ p.p-fonti{
     padding: 0;
 }
 
+/********** SVG CONFRONTO ******/
+
+.st0{fill:#0047CC;}
+.st1{fill:#F0F0F0;}
+.st2{fill:#CCDAF5;}
+.st3{fill:none;stroke:#F0F0F0;stroke-width:0.75;stroke-miterlimit:10;}
+.st4{fill:none;stroke:#CCDAF5;stroke-miterlimit:10;}
+.st5{fill:none;stroke:#CCDAF5;stroke-miterlimit:10;stroke-dasharray:12.0062,10.0051;}
+.st6{fill:none;stroke:#F0F0F0;stroke-width:0.5;stroke-miterlimit:10;}
+.st7{opacity:0;}
+.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+
+#Scardovari_mare.selezionata{
+    opacity: 1;
+}
+
+.boa_traccia{
+    opacity: 0.3;
+}
+
+.boa_traccia.selezionata{
+    opacity: 1;
+    z-index: 15;
+}
+
+
+.boa_traccia:hover #Scardovari_mare{
+    opacity: 0;
+}
+
 /********** SCROLL *************/
 
 .scrolly {
