@@ -1132,7 +1132,7 @@ pointer-events: all;
     
     p.body-1{
         font-weight: normal;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 20px;
     }
     
@@ -1149,7 +1149,7 @@ pointer-events: all;
 
     /**************************************** homepage xs ****************/
     .home{
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     .logo_tipo{
@@ -1214,7 +1214,7 @@ pointer-events: all;
     .button-next {
         width: 35px;
         right: 20px;
-        bottom: 50px;
+        bottom: 80px;
     }
     
     .button-prev {
@@ -1232,10 +1232,119 @@ pointer-events: all;
     }
 
     .card{
-        width: 60vw;
+        width: 80vw;
         padding: 10px;
         border: 2px solid black;
         top: 100px;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 740px) { 
+    /**************************************** homepage xs ****************/
+    .home{
+        margin-top: 70px;
+    }
+
+    .logo_tipo{
+        width: 100%;
+    }
+    
+    .abstract{
+        margin-top: 80px;
+    }
+    .start{
+        margin-top: 80px;
+    }
+
+    .installazione{
+        margin-top: 10px;
+    }
+
+    .start img, .installazione img{
+        width: 40vw;
+        object-fit: contain;
+    }
+
+    .chi_siamo {
+        margin-top: 15px;
+    }
+
+    .chi_siamo img {
+        width: 20vw;
+        object-fit: contain;
+    }
+
+    .cartiglio{
+        height: 30px;
+        margin-top: 23vh;
+        width: 80vw;
+        object-fit: contain;
+    }    
+
+    .cartiglio p{
+        font-size: 1rem;
+    }
+}
+
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width: 992px) { 
+    .home{
+        margin-top: 70px;
+    }
+
+    .logo_tipo{
+        width: 100%;
+    }
+    
+    .abstract{
+        margin-top: 80px;
+    }
+    .start{
+        margin-top: 80px;
+    }
+
+    .installazione{
+        margin-top: 10px;
+    }
+
+    .start img, .installazione img{
+        width: 40vw;
+        object-fit: contain;
+    }
+
+    .chi_siamo {
+        margin-top: 15px;
+    }
+
+    .chi_siamo img {
+        width: 20vw;
+        object-fit: contain;
+    }
+
+    .cartiglio{
+        height: 30px;
+        margin-top: 23vh;
+        width: 80vw;
+        object-fit: contain;
+    }    
+
+    .cartiglio p{
+        font-size: 1rem;
+    }
+} 

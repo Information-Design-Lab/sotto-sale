@@ -7,7 +7,7 @@ $(document).ready(function() {
         
 	}
     // MODIFICHE PER TABLET
-    if(larghezza_finestra < 768) {
+    if(larghezza_finestra < 992) {
         console.log("larghezza finestra minore di 768")
         $('.cartiglio_sx').addClass("border_right")
         $('.cartiglio_dx').removeClass("border_top");
@@ -29,7 +29,7 @@ $(window).resize(function() {
         
 	}
     // MODIFICHE PER TABLET
-    if(larghezza_finestra < 768) {
+    if(larghezza_finestra < 992) {
         console.log("larghezza finestra minore di 768")
         $('.cartiglio_sx').addClass("border_right")
         $('.cartiglio_dx').removeClass("border_top");
