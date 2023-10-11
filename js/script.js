@@ -1306,14 +1306,25 @@ $('.boa_traccia').hover(
 
 
 
-
-var larghezza_finestra = window.innerWidth;
-window.addEventListener("resize", media_query_js);
-
-function media_query_js() {
-    larghezza_finestra = window.innerWidth;
-    if(larghezza_finestra < 768) {
-        $('.cartiglio_sx').addClass("border_right");
+$(document).ready(function() {
+	var larghezza_finestra = $(window).outerWidth();
+	if(larghezza_finestra < 768) {
+        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_dx').removeClass("border_top");
+    }else{
+        $('.cartiglio_sx').removeClass("border_right");
+        $('.cartiglio_dx').addClass("border_top");
     }
-}
+});
+
+$(window).resize(function() {
+	var larghezza_finestra = $(window).outerWidth();
+	if(larghezza_finestra < 768) {
+        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_dx').removeClass("border_top");
+    }else{
+        $('.cartiglio_sx').removeClass("border_right");
+        $('.cartiglio_dx').addClass("border_top");
+    }
+});
 
