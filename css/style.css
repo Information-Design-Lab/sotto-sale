@@ -302,6 +302,7 @@ p.p-fonti{
 .cartiglio{
     height: 30px;
     margin-top: 150px;
+
 }
 
 
@@ -1148,7 +1149,7 @@ pointer-events: all;
 
     /**************************************** homepage xs ****************/
     .home{
-        margin-top: 90px;
+        margin-top: 60px;
     }
     
     .abstract{
@@ -1159,7 +1160,12 @@ pointer-events: all;
         width: 20%;
     }
 
-    .start img{
+    .installazione{
+        margin-top: 10px;
+        width: 20%;
+    }
+
+    .start img, .installazione img{
         width: 50vw;
         object-fit: contain;
     }
@@ -1167,7 +1173,13 @@ pointer-events: all;
     .cartiglio{
         height: 30px;
         margin-top: 10vh;
+        width: 100vw;
+        object-fit: contain;
     }    
+
+    .cartiglio p{
+        font-size: 0.8rem;
+    }
 
     /*************************************** elementi navigazione *******/
 

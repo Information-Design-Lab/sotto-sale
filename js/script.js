@@ -1303,3 +1303,6 @@ $('.boa_traccia').hover(
 		$('#' + id).addClass("selezionata");
 	}
 );
+
+
+
