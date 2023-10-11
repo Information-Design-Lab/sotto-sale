@@ -1,3 +1,47 @@
+/* Evento caricamento pagina */
+$(document).ready(function() {
+	var larghezza_finestra = $(window).outerWidth();
+
+    // MODIFICHE PER MOBILE
+    if(larghezza_finestra < 576) {
+        
+	}
+    // MODIFICHE PER TABLET
+    if(larghezza_finestra < 768) {
+        console.log("larghezza finestra minore di 768")
+        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_dx').removeClass("border_top");
+    }
+    // MODIFICHE PER DESKTOP
+    else{
+        console.log("larghezza finestra maggiore di 768")
+        $('.cartiglio_sx').removeClass("border_right");
+        $('.cartiglio_dx').addClass("border_top");
+    }
+});
+
+/* Evento ridimensionamento pagina */
+$(window).resize(function() {
+	var larghezza_finestra = $(window).outerWidth();
+
+    // MODIFICHE PER MOBILE
+    if(larghezza_finestra < 576) {
+        
+	}
+    // MODIFICHE PER TABLET
+    if(larghezza_finestra < 768) {
+        console.log("larghezza finestra minore di 768")
+        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_dx').removeClass("border_top");
+    }
+    // MODIFICHE PER DESKTOP
+    else{
+        console.log("larghezza finestra maggiore di 768")
+        $('.cartiglio_sx').removeClass("border_right");
+        $('.cartiglio_dx').addClass("border_top");
+    }
+});
+
 /* INIZIALIZZAZIONE MAPBOX */
 var next;
 var prev;
@@ -1304,27 +1348,4 @@ $('.boa_traccia').hover(
 	}
 );
 
-
-
-$(document).ready(function() {
-	var larghezza_finestra = $(window).outerWidth();
-	if(larghezza_finestra < 768) {
-        $('.cartiglio_sx').addClass("border_right")
-        $('.cartiglio_dx').removeClass("border_top");
-    }else{
-        $('.cartiglio_sx').removeClass("border_right");
-        $('.cartiglio_dx').addClass("border_top");
-    }
-});
-
-$(window).resize(function() {
-	var larghezza_finestra = $(window).outerWidth();
-	if(larghezza_finestra < 768) {
-        $('.cartiglio_sx').addClass("border_right")
-        $('.cartiglio_dx').removeClass("border_top");
-    }else{
-        $('.cartiglio_sx').removeClass("border_right");
-        $('.cartiglio_dx').addClass("border_top");
-    }
-});
 
