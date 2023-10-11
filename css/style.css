@@ -1157,16 +1157,23 @@ pointer-events: all;
     }
     .start{
         margin-top: 50px;
-        width: 20%;
     }
 
     .installazione{
         margin-top: 10px;
-        width: 20%;
     }
 
     .start img, .installazione img{
-        width: 50vw;
+        width: 55vw;
+        object-fit: contain;
+    }
+
+    .chi_siamo {
+        margin-top: 15px;
+    }
+
+    .chi_siamo img {
+        width: 25vw;
         object-fit: contain;
     }
 
