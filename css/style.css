@@ -1132,7 +1132,7 @@ pointer-events: all;
     
     p.body-1{
         font-weight: normal;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 20px;
     }
     
@@ -1151,9 +1151,13 @@ pointer-events: all;
     .home{
         margin-top: 60px;
     }
+
+    .logo_tipo{
+        width: 100%;
+    }
     
     .abstract{
-        margin-top: 80px;
+        margin-top: 50px;
     }
     .start{
         margin-top: 50px;
