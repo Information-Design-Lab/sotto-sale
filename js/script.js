@@ -1306,3 +1306,12 @@ $('.boa_traccia').hover(
 
 
 
+function media_query_js() {
+  if(window.innerWidth < 576) {
+    $('.cartiglio_sx').addClass("border_right");
+  }
+}
+
+window.onresize = media_query_js;
+
+media_query_js()
