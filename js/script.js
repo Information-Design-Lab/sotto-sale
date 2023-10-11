@@ -1306,12 +1306,14 @@ $('.boa_traccia').hover(
 
 
 
+
+var larghezza_finestra = window.innerWidth;
+window.addEventListener("resize", media_query_js);
+
 function media_query_js() {
-  if(window.innerWidth < 576) {
-    $('.cartiglio_sx').addClass("border_right");
-  }
+    larghezza_finestra = window.innerWidth;
+    if(larghezza_finestra < 768) {
+        $('.cartiglio_sx').addClass("border_right");
+    }
 }
 
-window.onresize = media_query_js;
-
-media_query_js()
