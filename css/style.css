@@ -1118,7 +1118,7 @@ pointer-events: all;
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 
-@media (max-width: 575.98px) { 
+@media (max-width: 739.98px) { 
     body,html{
         overflow: auto;
     }
@@ -1358,8 +1358,8 @@ pointer-events: all;
 
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
-@media (min-width: 576px) and (max-width: 739.98px) { 
-    /************************************** DS ****************/
+/* @media (min-width: 576px) and (max-width: 739.98px) { 
+     ************************************* DS *************** 
     h1 {
         font-weight: bold;
         font-size: 56px;
@@ -1377,7 +1377,7 @@ pointer-events: all;
         line-height: 44px;
     }
 
-    /* BODY */
+     * BODY * 
     p.body-2{
         font-weight: normal;
         font-size: 24px;
@@ -1390,7 +1390,7 @@ pointer-events: all;
         line-height: 20px;
     }
 
-    /* SUB */
+     * SUB * 
     p.tappa-approfondimenti{
         font-weight: normal;
         font-size: 16px;
@@ -1401,7 +1401,7 @@ pointer-events: all;
         font-size: 16px;
     }
 
-    /**************************************** homepage md ****************/
+     * *************************************** homepage md *************** * 
     .home{
         margin-top: 50px;
     }
@@ -1446,7 +1446,7 @@ pointer-events: all;
         font-size: 0.8rem;
     }
 
-    /*************************************** elementi navigazione *******/
+     * ************************************** elementi navigazione ****** * 
 
     #logo_su_mappa{
         width: 30px;
@@ -1512,9 +1512,9 @@ pointer-events: all;
         font-size: 1.2rem;
         margin-left: 35px;
         margin-bottom: 10px;
-        /* ignore default padding + 30px (center alignment) * /
+         * ignore default padding + 30px (center alignment) *  
         margin-top: 30px;
-        /* ignore default padding */
+         * ignore default padding * 
         margin-right: 0;
     }
     .card .descrizione {   
@@ -1524,37 +1524,38 @@ pointer-events: all;
         margin-bottom: 15px;
     }
 
-    /* CARD - PIN */
+     * CARD - PIN * 
     .pin{
         width: 23px;
         margin-top: 8px;
     }
 
-    /* CARD - SCOPRI */
+     * CARD - SCOPRI * 
     .card .scopri{
         font-family: 'PP Telegraf';
         font-weight: bold;
         font-size: 16px;
         text-decoration: underline; 
-        /* ignore default margin */
+         * ignore default margin * 
         margin: 0;
         cursor: pointer;
     }
 
-     /*************************************** Approfondimenti elementi in comune  *******/
+      * ************************************** Approfondimenti elementi in comune  ****** * 
 
-     /* .container_title_approfondimenti {
+      * .container_title_approfondimenti {
         position: relative;
         z-index: 10;
         height: 150px;
-    } */
+    } * 
 
     .fonti{
         padding-left: 50px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
-}
+}  */
+
 
 
 
