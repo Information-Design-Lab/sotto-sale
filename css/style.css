@@ -1540,6 +1540,20 @@ pointer-events: all;
         margin: 0;
         cursor: pointer;
     }
+
+     /*************************************** Approfondimenti elementi in comune  *******/
+
+     /* .container_title_approfondimenti {
+        position: relative;
+        z-index: 10;
+        height: 150px;
+    } */
+
+    .fonti{
+        padding-left: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 

@@ -4,27 +4,29 @@ $(document).ready(function() {
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
-        $('.frecce_fonti_sx').text("↑");
-        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
-        // Candia Lomellina
-        $('.mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter")
+
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        $('.frecce_fonti_sx').text("↑");
+        //Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
+        // Pian Del Re
+        $('.frecce_fonti_sx').text("↑");
         // Candia Lomellina
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+        $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter")
     }
     // MODIFICHE PER DESKTOP
     else{
-        $('.frecce_fonti_sx').text("←");
+        // Modifiche bordi cartiglio index
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
+        // Pian Del Re
+        $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
-        $('.mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter")
+        $('#mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter")
     }
 });
 
@@ -34,19 +36,29 @@ $(window).resize(function() {
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
-        $('.frecce_fonti_sx').text("↑");
+
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        $('.frecce_fonti_sx').text("↑");
+        //Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
+        // Pian Del Re
+        $('.frecce_fonti_sx').text("↑");
+        // Candia Lomellina
+        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+        $('.mare_quadretti_fonte').text("↑ Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter")
     }
     // MODIFICHE PER DESKTOP
     else{
-        $('.frecce_fonti_sx').text("←");
+        // Modifiche bordi cartiglio index
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
+        // Pian Del Re
+        $('.frecce_fonti_sx').text("←");
+        // Candia Lomellina
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('.mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter")
     }
 });
 
