@@ -8,11 +8,13 @@ $(document).ready(function() {
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
+        $('.frecce_fonti_sx').text("↑");
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
     }
     // MODIFICHE PER DESKTOP
     else{
+        $('.frecce_fonti_sx').text("←");
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
     }
@@ -28,11 +30,13 @@ $(window).resize(function() {
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
+        $('.frecce_fonti_sx').text("↑");
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
     }
     // MODIFICHE PER DESKTOP
     else{
+        $('.frecce_fonti_sx').text("←");
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
     }
