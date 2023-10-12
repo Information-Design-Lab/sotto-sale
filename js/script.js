@@ -4,17 +4,15 @@ $(document).ready(function() {
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
-        
+        $('.frecce_fonti_sx').text("↑");
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        console.log("larghezza finestra minore di 768")
-        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
     }
     // MODIFICHE PER DESKTOP
     else{
-        console.log("larghezza finestra maggiore di 768")
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
     }
@@ -26,17 +24,15 @@ $(window).resize(function() {
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
-        
+        $('.frecce_fonti_sx').text("↑");
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        console.log("larghezza finestra minore di 768")
-        $('.cartiglio_sx').addClass("border_right")
+        $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
     }
     // MODIFICHE PER DESKTOP
     else{
-        console.log("larghezza finestra maggiore di 768")
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
     }
