@@ -638,18 +638,6 @@ p.p-fonti{
     font-size: 16px;
 }
 
-.container_title_approfondimenti{
-    position: relative;
-    z-index: 10;
-    height: 240px;
-}
-
-.container_title_approfondimenti-2{
-    position: relative;
-    z-index: 10;
-    height: 240px;
-}
-
 .fonti{
     padding-left: 60px;
     padding-top: 60px;
@@ -673,8 +661,18 @@ p.p-fonti{
     height: 100%;
 }
 
-.citazione-approfondimenti-1{
-    padding: 100px;
+/*************************************** Approfondimenti Pian Del Re *******/
+
+.container_title_approfondimenti{
+    position: relative;
+    z-index: 10;
+    height: 240px;
+}
+
+.container_title_approfondimenti-2{
+    position: relative;
+    z-index: 10;
+    height: 240px;
 }
 
 .articolo-approfondimenti-1{
@@ -682,6 +680,10 @@ p.p-fonti{
     padding-left: 80px;
     padding-right: 120px;
     padding-bottom: 80px;
+}
+
+.citazione-approfondimenti-1{
+    padding: 100px;
 }
 
 .quotes_apertura{
@@ -1314,6 +1316,29 @@ pointer-events: all;
         padding-left: 30px;
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+
+    /*************************************** Approfondimenti Pian Del Re  *******/
+
+    .articolo-approfondimenti-1 {
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
+
+    .citazione-approfondimenti-1{
+        padding: 50px;
+    }
+    
+    .quotes_apertura{
+        margin-left: -20px;
+        height: 20px;
+    }
+    
+    .quotes_chiusura{
+        margin-right: -20px;
+        text-align: end;
     }
 }
 
