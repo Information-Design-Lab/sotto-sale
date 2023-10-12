@@ -1340,6 +1340,38 @@ pointer-events: all;
         margin-right: -20px;
         text-align: end;
     }
+
+    /************* Approfondimento Candia Lomellina *************/
+
+.candia_lomellina_img_container{
+    padding-top: 90%;
+}
+
+.articolo-approfondimenti-2{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+}
+
+.articolo-approfondimenti-2_1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.citazioni-approfondimenti-2{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.citazioni-approfondimenti-2_1{
+    background-color: #0047CC;
+    padding-top: 50px;
+}
+.citazioni-approfondimenti-2_2{
+    background-color: #0047CC;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 }
 
 
