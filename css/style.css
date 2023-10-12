@@ -1214,7 +1214,7 @@ pointer-events: all;
     .button-next {
         width: 35px;
         right: 20px;
-        bottom: 80px;
+        bottom: 50px;
     }
     
     .button-prev {
@@ -1232,18 +1232,19 @@ pointer-events: all;
     }
 
     .card{
-        width: 78vw;
+        width: 84vw;
         padding: 10px;
         border: 2px solid black;
         top: 80px;
     }
 
     .card.visible{
-        left: 55px;
+        left: 8vw;
     }
 
     .card .foto{
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        padding-top: 55%;
     }
 
     .card h3 {
@@ -1259,7 +1260,7 @@ pointer-events: all;
         font-family: 'PP Telegraf';
         font-weight: normal;
         line-height: 1.5rem;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     /* CARD - PIN */
@@ -1273,7 +1274,7 @@ pointer-events: all;
         font-family: 'PP Telegraf';
         font-weight: bold;
         font-size: 16px;
-        text-decoration: underline black 2px;
+        text-decoration: underline; 
         /* ignore default margin */
         margin: 0;
         cursor: pointer;
@@ -1295,7 +1296,7 @@ pointer-events: all;
 
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
-@media (min-width: 740px) { 
+@media (min-width: 740px) and (max-width: 991.98px) { 
     /**************************************** homepage xs ****************/
     .home{
         margin-top: 70px;
@@ -1342,50 +1343,3 @@ pointer-events: all;
     }
 }
 
-
-/* `lg` applies to medium devices (tablets, less than 992px) */
-@media (min-width: 992px) { 
-    .home{
-        margin-top: 70px;
-    }
-
-    .logo_tipo{
-        width: 100%;
-    }
-    
-    .abstract{
-        margin-top: 80px;
-    }
-    .start{
-        margin-top: 80px;
-    }
-
-    .installazione{
-        margin-top: 10px;
-    }
-
-    .start img, .installazione img{
-        width: 40vw;
-        object-fit: contain;
-    }
-
-    .chi_siamo {
-        margin-top: 15px;
-    }
-
-    .chi_siamo img {
-        width: 20vw;
-        object-fit: contain;
-    }
-
-    .cartiglio{
-        height: 30px;
-        margin-top: 23vh;
-        width: 80vw;
-        object-fit: contain;
-    }    
-
-    .cartiglio p{
-        font-size: 1rem;
-    }
-} 
