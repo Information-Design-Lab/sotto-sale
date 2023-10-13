@@ -1475,6 +1475,8 @@ pointer-events: all;
         font-weight: normal;
         font-size: 12px;
         line-height: 15px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }   
     .tabella_laghi .body-1{
         font-size: 14px;
