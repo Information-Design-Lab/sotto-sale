@@ -1460,8 +1460,11 @@ pointer-events: all;
         height: max-content;
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 2px;
-        padding-bottom: 2px;
+    }
+
+    .col-tab-laghi{
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     .container-testi {
