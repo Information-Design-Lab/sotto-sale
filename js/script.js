@@ -3,11 +3,11 @@ $(document).ready(function() {
 	var larghezza_finestra = $(window).outerWidth();
 
     // Grandi Laghi
-    var altezza_info_su = $(".nomi_laghi").outerHeight();
-	$(".info_su").css("height",altezza_info_su);
-
+    /* var altezza_info_su = $(".nomi_laghi").outerHeight();
+	$(".info_su").css("height",altezza_info_su); */
+    /* 
     var altezza_tabella_laghi = $(".laghi_col_dx").outerHeight();
-	$(".laghi_col_sx").css("height",altezza_tabella_laghi);
+	$(".laghi_col_sx").css("height",altezza_tabella_laghi); */
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
@@ -25,7 +25,6 @@ $(document).ready(function() {
         $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
         $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
         $('.col-sparisce').addClass("not-visible");
-
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -46,8 +45,11 @@ $(window).resize(function() {
 	var larghezza_finestra = $(window).outerWidth();
 
     // Grandi Laghi
-    var altezza_info_su = $(".nomi_laghi").outerHeight();
-	$(".info_su").css("height",altezza_info_su);
+    /* var altezza_info_su = $(".nomi_laghi").outerHeight();
+	$(".info_su").css("height",altezza_info_su); */
+/* 
+    var altezza_tabella_laghi = $(".laghi_col_dx").outerHeight();
+	$(".laghi_col_sx").css("height",altezza_tabella_laghi); */
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {

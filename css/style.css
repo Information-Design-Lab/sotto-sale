@@ -680,7 +680,7 @@ p.p-fonti{
 .container_title_approfondimenti-2{
     position: relative;
     z-index: 10;
-    height: 240px;
+    /* height: 240px; */
 }
 
 .articolo-approfondimenti-1{
@@ -786,9 +786,40 @@ overflow-x: hidden;
     padding-right: 0;
 }
 
+.container_laghi_indentikit{
+    height: 710px;
+}
+
+.laghi_col_sx{
+    height: 100%;
+}
+
+.laghi_col_dx{
+    height: 100%;
+}
+
+.container_img_laghi{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.laghi_img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabella_laghi{
+    height: 13%;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
 
 .info_su{
     width: 100%;
+    height: 9%;
 }
 
 .nomi_laghi{
@@ -822,25 +853,6 @@ overflow-x: hidden;
     padding-bottom: 10px;
 }
 
-.container_img_laghi{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.laghi_img{
-    height: 700px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.tabella_laghi{
-    height: 13%;
-    display: flex;
-    align-items: center;
-    padding-left: 40px;
-}
-
 .dataviz_img{
     width: 100%;
     padding-top: 30px;
@@ -850,6 +862,10 @@ overflow-x: hidden;
     padding-left: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+#approfondimenti-3{
+    overflow-x: hidden;
 }
 
 /************* Approfondimento Mezzanino *************/
@@ -1187,11 +1203,11 @@ pointer-events: all;
     }
 
     .padding-left-sm{
-        padding-left: 60px;
+        padding-left: 30px;
     }
 
     .padding-right-sm{
-        padding-left: 60px;
+        padding-left: 30px;
     }
 
     .padding-bottom-sm{
@@ -1381,36 +1397,77 @@ pointer-events: all;
 
     /************* Approfondimento Candia Lomellina *************/
 
-.candia_lomellina_img_container{
-    padding-top: 90%;
-}
+    .candia_lomellina_img_container{
+        padding-top: 90%;
+    }
 
-.articolo-approfondimenti-2{
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 40px;
-    padding-bottom: 50px;
-}
+    .articolo-approfondimenti-2{
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
 
-.articolo-approfondimenti-2_1{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+    .articolo-approfondimenti-2_1{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
-.citazioni-approfondimenti-2{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.citazioni-approfondimenti-2_1{
-    background-color: #0047CC;
-    padding-top: 30px;
-}
-.citazioni-approfondimenti-2_2{
-    background-color: #0047CC;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+    .citazioni-approfondimenti-2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .citazioni-approfondimenti-2_1{
+        background-color: #0047CC;
+        padding-top: 30px;
+    }
+    .citazioni-approfondimenti-2_2{
+        background-color: #0047CC;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
+    /************* Approfondimento Grandi Laghi *************/
+
+    .container_laghi_indentikit{
+        height: 380px;
+        margin-bottom: 380px;
+    }
+
+    .laghi_col_sx{
+        height: 100%;
+    }
+
+    .laghi_col_dx{
+        height: 100%;
+    }
+
+    .container_img_laghi{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .laghi_img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tabella_laghi{
+        height: 13%;
+        padding-left: 40px;
+    }
+
+    .container-testi {
+        padding-bottom: 50px;
+    }
+
+    .nomi_laghi p{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    }   
 
 }
 
