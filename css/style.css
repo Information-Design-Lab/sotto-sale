@@ -706,6 +706,10 @@ p.p-fonti{
 
 
 /************* Approfondimento Candia Lomellina *************/
+#approfondimenti-2{
+overflow-x: hidden;
+}
+
 .container_title_lomellina{
     position: absolute;
 }
@@ -782,9 +786,19 @@ p.p-fonti{
     padding-right: 0;
 }
 
+
+.info_su{
+    width: 100%;
+}
+
+.nomi_laghi{
+    width: 100%;
+    height: 9%;
+}
+
 .button-laghi{
     cursor: pointer;
-    height: 50px;
+    height: 100%;
     width: 25%;
     float: left;
     text-align: center;
@@ -821,7 +835,7 @@ p.p-fonti{
 }
 
 .tabella_laghi{
-    height: 14.3%;
+    height: 13%;
     display: flex;
     align-items: center;
     padding-left: 40px;
@@ -1176,6 +1190,10 @@ pointer-events: all;
         padding-left: 60px;
     }
 
+    .padding-right-sm{
+        padding-left: 60px;
+    }
+
     .padding-bottom-sm{
         padding-bottom: 30px;
     }
@@ -1406,11 +1424,6 @@ pointer-events: all;
 
 
 
-
-
-
-
-
 /* `md` applies to small devices (landscape phones, less than 768px) */
 /* @media (min-width: 576px) and (max-width: 739.98px) { 
      ************************************* DS *************** 
@@ -1617,11 +1630,6 @@ pointer-events: all;
 
 
 
-
-
-
-
-
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (min-width: 740px) and (max-width: 991.98px) { 
      /************************************** DS ****************/
@@ -1714,6 +1722,19 @@ pointer-events: all;
     .padding-left-sm{
         padding-left: 100px;
     }
+
+    .padding-right-sm{
+        padding-left: 100px;
+    }
+
+    .padding-bottom-sm{
+        padding-bottom: 50px;
+    }
+
+    .padding-top-sm{
+        padding-top: 50px;
+    }
+
     /*************************************** elementi navigazione *******/
 
     #logo_su_mappa{
@@ -1818,5 +1839,30 @@ pointer-events: all;
         padding-bottom: 100px;
     }
 
+    /*************************************** Approfondimenti Candia Lomellina *******/
+
+    .articolo-approfondimenti-2 {
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+    }
+
+    .citazioni-approfondimenti-2 {
+        background-color: #0047CC;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .citazioni-approfondimenti-2_1 {
+        background-color: #0047CC;
+        padding-top: 50px;
+    }
+
+    .citazioni-approfondimenti-2_2 {
+        background-color: #0047CC;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 

@@ -2,6 +2,13 @@
 $(document).ready(function() {
 	var larghezza_finestra = $(window).outerWidth();
 
+    // Grandi Laghi
+    var altezza_info_su = $(".nomi_laghi").outerHeight();
+	$(".info_su").css("height",altezza_info_su);
+
+    var altezza_tabella_laghi = $(".laghi_col_dx").outerHeight();
+	$(".laghi_col_sx").css("height",altezza_tabella_laghi);
+
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
 
@@ -37,6 +44,10 @@ $(document).ready(function() {
 /* Evento ridimensionamento pagina */
 $(window).resize(function() {
 	var larghezza_finestra = $(window).outerWidth();
+
+    // Grandi Laghi
+    var altezza_info_su = $(".nomi_laghi").outerHeight();
+	$(".info_su").css("height",altezza_info_su);
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
