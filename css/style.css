@@ -849,6 +849,7 @@ overflow-x: hidden;
 }
 
 .fonti_laghi{
+    padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -864,9 +865,9 @@ overflow-x: hidden;
     padding-bottom: 20px;
 }
 
-#approfondimenti-3{
+/* #approfondimenti-3{
     overflow-x: hidden;
-}
+} */
 
 /************* Approfondimento Mezzanino *************/
 
@@ -1430,8 +1431,8 @@ pointer-events: all;
     /************* Approfondimento Grandi Laghi *************/
 
     .container_laghi_indentikit{
-        height: 380px;
-        margin-bottom: 380px;
+        min-height: 425px;
+        height: max-content;
     }
 
     .laghi_col_sx{
@@ -1455,8 +1456,12 @@ pointer-events: all;
     }
 
     .tabella_laghi{
-        height: 13%;
-        padding-left: 40px;
+        min-height: 13%;
+        height: max-content;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
 
     .container-testi {
@@ -1468,6 +1473,15 @@ pointer-events: all;
         font-size: 12px;
         line-height: 15px;
     }   
+    .tabella_laghi .body-1{
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .tabella_laghi .body-2{
+        font-size: 16px;
+        line-height: 18px;
+    }
 
 }
 
@@ -1777,11 +1791,11 @@ pointer-events: all;
     }
 
     .padding-left-sm{
-        padding-left: 100px;
+        padding-left: 50px;
     }
 
     .padding-right-sm{
-        padding-left: 100px;
+        padding-left: 50px;
     }
 
     .padding-bottom-sm{
