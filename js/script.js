@@ -8,7 +8,7 @@ $(document).ready(function() {
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        //Modifiche bordi cartiglio index
+        // Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
         // Pian Del Re
@@ -17,6 +17,8 @@ $(document).ready(function() {
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
         $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
+        $('.col-sparisce').addClass("not-visible");
+
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -27,6 +29,8 @@ $(document).ready(function() {
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso, un Video di Riseria Ferron.");
+        $('.col-sparisce').removeClass("not-visible");
     }
 });
 
@@ -40,7 +44,7 @@ $(window).resize(function() {
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
-        //Modifiche bordi cartiglio index
+        // Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
         // Pian Del Re
@@ -49,6 +53,8 @@ $(window).resize(function() {
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
         $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
+        $('.col-sparisce').addClass("not-visible");
+
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -59,6 +65,8 @@ $(window).resize(function() {
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso, un Video di Riseria Ferron.");
+        $('.col-sparisce').removeClass("not-visible");
     }
 });
 
