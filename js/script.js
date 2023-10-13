@@ -26,9 +26,7 @@ $(document).ready(function() {
         // Pian Del Re
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
-        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");/* 
-        $('#mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter");
-        $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso,<br>      un Video di Riseria Ferron."); */
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
     }
 });
 
@@ -49,7 +47,8 @@ $(window).resize(function() {
         $('.frecce_fonti_sx').text("↑");
         // Candia Lomellina
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
-        $('.mare_quadretti_fonte').text("↑ Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter")
+        $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
+        $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -59,8 +58,7 @@ $(window).resize(function() {
         // Pian Del Re
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
-        /* $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
-        $('.mare_quadretti_fonte').text("↑  Foto:<br>     Copyright © 2016, <br>     Andrea Cherci<br>     (@cherchiandrea)<br>     on Twitter") */
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
     }
 });
 
