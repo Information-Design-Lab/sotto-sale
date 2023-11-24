@@ -152,9 +152,9 @@ p.p-fonti{
     padding-bottom: 120px;
 }
 
-.padding-left-sm{
+/* .padding-left-sm{
     padding-left: 0;
-}
+} */
 
 .no-wrap{
     white-space: nowrap;
@@ -816,6 +816,11 @@ overflow-x: hidden;
     align-items: center;
     padding-left: 40px;
 }
+.col-tab-laghi{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
 .info_su{
     width: 100%;
@@ -846,6 +851,10 @@ overflow-x: hidden;
 .button-laghi.active{
     background-color: #0047CC;
     color: #F0F0F0;
+}
+
+.fonti_laghi_container{
+    height: 6.5%;
 }
 
 .fonti_laghi{
@@ -1488,6 +1497,10 @@ pointer-events: all;
         line-height: 18px;
     }
 
+    .fonti_laghi_container{
+        height: 20%;
+    }
+
 }
 
 
@@ -1939,6 +1952,66 @@ pointer-events: all;
         background-color: #0047CC;
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+     /*************************************** Approfondimenti Grandi Laghi *******/
+
+     .container_laghi_indentikit{
+        min-height: 600px;
+        height: max-content;
+    }
+
+    .laghi_col_sx{
+        height: 100%;
+    }
+
+    .laghi_col_dx{
+        height: 100%;
+    }
+
+    .container_img_laghi{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .laghi_img{
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tabella_laghi{
+        min-height: 13%;
+        height: max-content;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .col-tab-laghi{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .container-testi {
+        padding-bottom: 50px;
+    }
+
+    .nomi_laghi p{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }   
+    .tabella_laghi .body-1{
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .tabella_laghi .body-2{
+        font-size: 16px;
+        line-height: 18px;
     }
 }
 

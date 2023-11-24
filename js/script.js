@@ -25,6 +25,8 @@ $(document).ready(function() {
         $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
         $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
         $('.col-sparisce').addClass("not-visible");
+        // Grandi Laghi
+        $('.fonti_laghi_container').removeClass("border_bottom");
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -37,6 +39,8 @@ $(document).ready(function() {
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
         $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso, un Video di Riseria Ferron.");
         $('.col-sparisce').removeClass("not-visible");
+        // Grandi Laghi
+        $('.fonti_laghi_container').addClass("border_bottom");
     }
 });
 
