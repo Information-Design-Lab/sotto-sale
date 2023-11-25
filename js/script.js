@@ -218,12 +218,21 @@ $(document).ready(function() {
         });
 
         // Piacenza
+        $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top");
+        $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
         $('.col-sparisce').addClass("not-visible");
+        // $("<img>").attr("src", "img/piacenza_portate_sm.svg")
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
                 .appendTo(".piacenza_container_dataviz");
+
+        // Cremona
+        $("<img>").attr("src", "img/cremona_portate.gif")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_gif");
 
     }
     // MODIFICHE PER DESKTOP
@@ -636,12 +645,22 @@ $(window).resize(function() {
         });
 
         // Piacenza
+        $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top").addClass("border_bottom");
+        $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
         $('.col-sparisce').addClass("not-visible");
+        // $("<img>").attr("src", "img/piacenza_portate_sm.svg")
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
                 .appendTo(".piacenza_container_dataviz");
+
+         // Cremona
+         // $("<img>").attr("src", "img/cremona_portate_sm.gif")
+         $("<img>").attr("src", "img/cremona_portate.gif")
+         .addClass("dataviz_img")
+         .addClass("padding-top")
+         .appendTo(".cremona_container_gif");
     }
     // MODIFICHE PER DESKTOP
     else{
