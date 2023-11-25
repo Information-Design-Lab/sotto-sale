@@ -780,6 +780,10 @@ overflow-x: hidden;
 
 /************* Approfondimento Grandi Laghi *************/
 
+#approfondimenti-3{
+    overflow-x: hidden;
+}
+
 .container-testi{
     padding-bottom: 110px;
     padding-left: 0;
@@ -874,11 +878,11 @@ overflow-x: hidden;
     padding-bottom: 20px;
 }
 
-#approfondimenti-3{
-    overflow-x: hidden;
-} 
-
 /************* Approfondimento Mezzanino *************/
+
+#approfondimenti-4{
+    overflow-x: hidden;
+}
 
 .frasi_citazioni_mezzanino{
     padding-top: 150px;
@@ -889,6 +893,10 @@ overflow-x: hidden;
 }
 
 /************* Approfondimento Piacenza *************/
+
+#approfondimenti-5{
+    overflow-x: hidden;
+}
 
 .approfondimenti_piacenza{
     padding: 100px;
@@ -909,6 +917,10 @@ overflow-x: hidden;
 
 /************* Approfondimento Cremona *************/
 
+#approfondimenti-6{
+    overflow-x: hidden;
+}
+
 .approfondimenti_cremona{
     padding: 100px;
 }
@@ -919,6 +931,10 @@ overflow-x: hidden;
 }
 
 /************* Approfondimento Boretto *************/
+
+#approfondimenti-7{
+    overflow-x: hidden;
+}
 
 .approfondimenti_boretto{
     padding: 100px;
@@ -946,6 +962,9 @@ overflow-x: hidden;
 
 /************* Approfondimento Pontelagoscuro *************/
 
+#approfondimenti-8{
+    overflow-x: hidden;
+}
 
 .dataviz_descrizione_pontelagoscuro{
     padding-top: 60px;
@@ -953,6 +972,9 @@ overflow-x: hidden;
 
 /************* Approfondimento Delta *************/
 
+#approfondimenti-9{
+    overflow-x: hidden;
+}
 
 .container_img_mappa{
     position: relative;
@@ -1186,6 +1208,13 @@ pointer-events: all;
         font-weight: bold;
         font-size: 26px;
         line-height: 30px;
+    }
+
+    h3.citazioni {
+        font-family: 'PP Telegraf', sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 25px;
     }
     
     /* BODY */
@@ -1499,6 +1528,12 @@ pointer-events: all;
 
     .fonti_laghi_container{
         height: 20%;
+    }
+
+    /************* Approfondimento Mezzanino *************/
+
+    .frasi_citazioni_mezzanino{
+        padding-top: 60px;
     }
 
 }
@@ -2012,6 +2047,12 @@ pointer-events: all;
     .tabella_laghi .body-2{
         font-size: 16px;
         line-height: 18px;
+    }
+
+    /************* Approfondimento Mezzanino *************/
+
+    .frasi_citazioni_mezzanino{
+        padding-top: 80px;
     }
 }
 
