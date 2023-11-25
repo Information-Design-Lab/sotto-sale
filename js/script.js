@@ -216,6 +216,12 @@ $(document).ready(function() {
                 
             } 
         });
+
+        // Piacenza
+        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+        $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
+        $('.col-sparisce').addClass("not-visible");
+
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -625,6 +631,11 @@ $(window).resize(function() {
                 
             } 
         });
+
+        // Piacenza
+        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+        $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
+        $('.col-sparisce').addClass("not-visible");
     }
     // MODIFICHE PER DESKTOP
     else{
