@@ -218,7 +218,7 @@ $(document).ready(function() {
         });
 
         // Piacenza
-        $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top");
+        $('.fonti_bordi_sx').removeClass("border_left");
         $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
@@ -430,6 +430,12 @@ $(document).ready(function() {
                 .appendTo(".container_dataviz_portate_laghi");  
             } 
         });
+
+        // Piacenza
+        $('.fonti_bordi_sx').removeClass("border_top").addClass('border_left');
+        $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
 
          // About
          $('#img_about').removeClass("order-1");
@@ -658,7 +664,7 @@ $(window).resize(function() {
         });
 
         // Piacenza
-        $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top").addClass("border_bottom");
+        $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top");
         $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
@@ -871,6 +877,11 @@ $(window).resize(function() {
             } 
         });
 
+        // Piacenza
+        $('.fonti_bordi_sx').removeClass("border_top").addClass('border_left');
+        $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
 
         // About
         $('#img_about').removeClass("order-1");
