@@ -1316,8 +1316,9 @@ pointer-events: all;
     }
 
     .cartiglio{
+        position: fixed;
         height: 30px;
-        margin-top: 10vh;
+        bottom: 8vh;
         width: 100vw;
         object-fit: contain;
     }    
