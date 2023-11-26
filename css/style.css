@@ -3,6 +3,7 @@ body,html {
     padding: 0;
     background-color: #F0F0F0;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* .row{
@@ -671,10 +672,14 @@ p.p-fonti{
 
 /*************************************** Approfondimenti Pian Del Re *******/
 
+#approfondimenti-1{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .container_title_approfondimenti{
     position: relative;
     z-index: 10;
-    height: 240px;
 }
 
 .container_title_approfondimenti-2{
@@ -707,7 +712,8 @@ p.p-fonti{
 
 /************* Approfondimento Candia Lomellina *************/
 #approfondimenti-2{
-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container_title_lomellina{
@@ -782,6 +788,7 @@ overflow-x: hidden;
 
 #approfondimenti-3{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container-testi{
@@ -882,6 +889,7 @@ overflow-x: hidden;
 
 #approfondimenti-4{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .frasi_citazioni_mezzanino{
@@ -896,6 +904,7 @@ overflow-x: hidden;
 
 #approfondimenti-5{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .approfondimenti_piacenza{
@@ -919,6 +928,7 @@ overflow-x: hidden;
 
 #approfondimenti-6{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .approfondimenti_cremona{
@@ -934,6 +944,7 @@ overflow-x: hidden;
 
 #approfondimenti-7{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .approfondimenti_boretto{
@@ -964,6 +975,7 @@ overflow-x: hidden;
 
 #approfondimenti-8{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .dataviz_descrizione_pontelagoscuro{
@@ -974,6 +986,7 @@ overflow-x: hidden;
 
 #approfondimenti-9{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container_img_mappa{
@@ -1071,6 +1084,10 @@ overflow-x: hidden;
 
 /**************************************************************** Installazione ********************/
 
+#approfondimenti-10{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 .installazione_pag {
     position: fixed;
@@ -1078,12 +1095,13 @@ overflow-x: hidden;
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 
     background-color: #f0f0f0;
 
     padding:0;
-    overflow:auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -1098,12 +1116,13 @@ overflow-x: hidden;
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 
     background-color: #f0f0f0;
 
     padding:0;
-    overflow:auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .about-2 {
@@ -1123,7 +1142,8 @@ overflow-x: hidden;
     transition: opacity 0.2s linear;
     
     padding:0;
-    overflow:auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .about-2.visible {
@@ -1246,7 +1266,7 @@ pointer-events: all;
     }
 
     .padding-right-sm{
-        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .padding-bottom-sm{
@@ -1255,6 +1275,10 @@ pointer-events: all;
 
     .padding-top-sm{
         padding-top: 30px;
+    }
+
+    .padding-bottom-sm-0{
+        padding-bottom: 0px;
     }
 
     /**************************************** homepage sm ****************/

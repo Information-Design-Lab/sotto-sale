@@ -234,6 +234,13 @@ $(document).ready(function() {
                 .addClass("padding-top")
                 .appendTo(".cremona_container_gif");
 
+        
+        // About
+        $('#img_about').addClass("order-1");
+        $('#col_about').addClass("order-2");
+        $('#testo_about').addClass("order-3"); 
+        $('#about_divisoria').removeClass("border_left");
+
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -423,6 +430,12 @@ $(document).ready(function() {
                 .appendTo(".container_dataviz_portate_laghi");  
             } 
         });
+
+         // About
+         $('#img_about').removeClass("order-1");
+         $('#col_about').removeClass("order-2");
+         $('#testo_about').removeClass("order-3");
+         $('#about_divisoria').addClass("border_left");
     }
 });
 
@@ -661,6 +674,13 @@ $(window).resize(function() {
          .addClass("dataviz_img")
          .addClass("padding-top")
          .appendTo(".cremona_container_gif");
+
+
+         // About
+        $('#img_about').addClass("order-1");
+        $('#col_about').addClass("order-2");
+        $('#testo_about').addClass("order-3");
+        $('#about_divisoria').removeClass("border_left");
     }
     // MODIFICHE PER DESKTOP
     else{
@@ -850,6 +870,13 @@ $(window).resize(function() {
                 .appendTo(".container_dataviz_portate_laghi");  
             } 
         });
+
+
+        // About
+        $('#img_about').removeClass("order-1");
+        $('#col_about').removeClass("order-2");
+        $('#testo_about').removeClass("order-3");
+        $('#about_divisoria').addClass("border_left");
     }
 });
 
