@@ -6,6 +6,14 @@ body,html {
     overflow-y: auto;
 }
 
+.mapboxgl-ctrl-bottom-left{
+    display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-right{
+    display: none !important;
+}
+
 /* .row{
     margin: 0; 
     padding-left: 0;
@@ -843,6 +851,12 @@ p.p-fonti{
     height: 9%;
 }
 
+.nomi_laghi p{
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .button-laghi{
     cursor: pointer;
     height: 100%;
@@ -1238,7 +1252,7 @@ pointer-events: all;
     p.body-1{
         font-weight: normal;
         font-size: 18px;
-        line-height: 20px;
+        line-height: 24px;
     }
     
     /* SUB */
@@ -1321,7 +1335,7 @@ pointer-events: all;
     .cartiglio{
         position: fixed;
         height: 30px;
-        bottom: 8vh;
+        bottom: 60px;
         width: 100vw;
         object-fit: contain;
     }    
@@ -1333,9 +1347,10 @@ pointer-events: all;
     /*************************************** elementi navigazione *******/
 
     #logo_su_mappa{
-        width: 30px;
+        width: 28px;
+        height: auto;
         left: 20px;
-        top: 30px;
+        top: 32px;
     }
 
     #button_satellite{
@@ -1352,13 +1367,13 @@ pointer-events: all;
     .button-next {
         width: 35px;
         right: 20px;
-        bottom: 3.5vh;
+        bottom: 50px;
     }
     
     .button-prev {
         width: 35px;
         left: 20px;
-        bottom: 3.5vh;
+        bottom: 50px;
     }
 
     .arrow{
@@ -1372,13 +1387,13 @@ pointer-events: all;
         padding-right: 20px;
         width: 100vw;
         height: 30px;
-        bottom: 2vh;
+        bottom: 40px;
         z-index: 9;
     }
 
     .card{
         width: 84vw;
-        padding: 10px;
+        padding: 18px;
         border: 2px solid black;
         top: 12vh;
     }
@@ -1404,14 +1419,14 @@ pointer-events: all;
     .card .descrizione {   
         font-family: 'PP Telegraf';
         font-weight: normal;
-        line-height: 1.5rem;
+        line-height: 1.2rem;
         margin-bottom: 15px;
     }
 
     /* CARD - PIN */
     .pin{
         width: 23px;
-        margin-top: 8px;
+        margin-top: 3px;
     }
 
     /* CARD - SCOPRI */
@@ -1468,10 +1483,14 @@ pointer-events: all;
         padding-top: 90%;
     }
 
+    .candia_lomellina_img_container img{
+        width: auto;
+    }
+
     .articolo-approfondimenti-2{
         padding-top: 50px;
-        padding-left: 30px;
-        padding-right: 40px;
+        padding-left: 10.5%;
+        padding-right: 10.5%;
         padding-bottom: 50px;
     }
 
@@ -1501,12 +1520,21 @@ pointer-events: all;
         height: max-content;
     }
 
+    .pad_testi_laghi-sm{
+        padding-left: 10.5%;
+        padding-right: 10.5%;
+    }
+
     .laghi_col_sx{
         height: 100%;
     }
 
     .laghi_col_dx{
         height: 100%;
+    }
+
+    .info_su{
+        display: none;
     }
 
     .container_img_laghi{
@@ -1539,10 +1567,12 @@ pointer-events: all;
 
     .nomi_laghi p{
         font-weight: normal;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 15px;
-        padding-top: 2px;
-        padding-bottom: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
     }   
     .tabella_laghi .body-1{
         font-size: 14px;

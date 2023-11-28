@@ -33,7 +33,8 @@ $(document).ready(function() {
         // Grandi Laghi
         $('.fonti_laghi_container').removeClass("border_bottom");
         if(eventi.lago_maggiore.stato == "attivo"){
-            jQuery(".dataviz_img").remove();
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
             $("<img>").attr("src", "img/lago_maggiore_altezze_sm.svg")
             .addClass("dataviz_img")
@@ -43,188 +44,13 @@ $(document).ready(function() {
             .addClass("dataviz_img")
             .appendTo(".container_dataviz_portate_laghi");
         }
-        // CLICK BOTTONE LAGHI --> selezionare lago 
-
-        // ---------------------------------------------- LAGO MAGGIORE
-        jQuery("#lago_maggiore").click(function(){
-            if(eventi.lago_maggiore.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_maggiore.stato = "attivo";
-                jQuery("#lago_maggiore").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_maggiore.regioni);
-                jQuery(".superficie").text(eventi.lago_maggiore.superficie);
-                jQuery(".volume").text(eventi.lago_maggiore.volume);
-                jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
-                jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_maggiore.jpeg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_maggiore_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_maggiore_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO COMO
-        jQuery("#lago_como").click(function(){
-            if(eventi.lago_como.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_como.stato = "attivo";
-                jQuery("#lago_como").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_como.regioni);
-                jQuery(".superficie").text(eventi.lago_como.superficie);
-                jQuery(".volume").text(eventi.lago_como.volume);
-                jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
-                jQuery(".immissari").text(eventi.lago_como.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_como.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_como.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_como_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_como_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO ISEO
-        jQuery("#lago_iseo").click(function(){
-            if(eventi.lago_iseo.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_iseo.stato = "attivo";
-                jQuery("#lago_iseo").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_iseo.regioni);
-                jQuery(".superficie").text(eventi.lago_iseo.superficie);
-                jQuery(".volume").text(eventi.lago_iseo.volume);
-                jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
-                jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_iseo.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_iseo_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_iseo_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO GARDA
-        jQuery("#lago_garda").click(function(){
-            if(eventi.lago_garda.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_garda.stato = "attivo";
-                jQuery("#lago_garda").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_garda.regioni);
-                jQuery(".superficie").text(eventi.lago_garda.superficie);
-                jQuery(".volume").text(eventi.lago_garda.volume);
-                jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
-                jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_garda.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_garda_altezze_sm.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_garda_portate_sm.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
 
         // Piacenza
         $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
         $('.col-sparisce').addClass("not-visible");
+        
+        $('.piacenza_container_dataviz .dataviz_img').remove();
         // $("<img>").attr("src", "img/piacenza_portate_sm.svg")
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
@@ -267,183 +93,12 @@ $(document).ready(function() {
         $('.col-sparisce').removeClass("not-visible");
         // Grandi Laghi
         $('.fonti_laghi_container').addClass("border_bottom");
-        // CLICK BOTTONE LAGHI --> selezionare lago 
-
-        // ---------------------------------------------- LAGO MAGGIORE
-        jQuery("#lago_maggiore").click(function(){
-            if(eventi.lago_maggiore.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_maggiore.stato = "attivo";
-                jQuery("#lago_maggiore").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_maggiore.regioni);
-                jQuery(".superficie").text(eventi.lago_maggiore.superficie);
-                jQuery(".volume").text(eventi.lago_maggiore.volume);
-                jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
-                jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_maggiore.jpeg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_maggiore_altezze.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_maggiore_portate.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO COMO
-        jQuery("#lago_como").click(function(){
-            if(eventi.lago_como.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_como.stato = "attivo";
-                jQuery("#lago_como").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_como.regioni);
-                jQuery(".superficie").text(eventi.lago_como.superficie);
-                jQuery(".volume").text(eventi.lago_como.volume);
-                jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
-                jQuery(".immissari").text(eventi.lago_como.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_como.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_como.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_como_altezze.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_como_portate.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO ISEO
-        jQuery("#lago_iseo").click(function(){
-            if(eventi.lago_iseo.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_iseo.stato = "attivo";
-                jQuery("#lago_iseo").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_iseo.regioni);
-                jQuery(".superficie").text(eventi.lago_iseo.superficie);
-                jQuery(".volume").text(eventi.lago_iseo.volume);
-                jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
-                jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_iseo.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_iseo_altezze.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_iseo_portate.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO GARDA
-        jQuery("#lago_garda").click(function(){
-            if(eventi.lago_garda.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_garda.stato = "attivo";
-                jQuery("#lago_garda").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_garda.regioni);
-                jQuery(".superficie").text(eventi.lago_garda.superficie);
-                jQuery(".volume").text(eventi.lago_garda.volume);
-                jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
-                jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_garda.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
-                
-                jQuery(".dataviz_img").remove();
-                $("<img>").attr("src", "img/lago_garda_altezze.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_garda_portate.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");  
-            } 
-        });
 
         // Piacenza
+        $('.piacenza_container_dataviz .dataviz_img').remove();
+        $("<img>").attr("src", "img/piacenza_portate.svg")
+                .addClass("dataviz_img")
+                .appendTo(".piacenza_container_dataviz");
         $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
 
@@ -489,7 +144,8 @@ $(window).resize(function() {
         // Grandi Laghi
         $('.fonti_laghi_container').removeClass("border_bottom");
         if(eventi.lago_maggiore.stato == "attivo"){
-            jQuery(".dataviz_img").remove();
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
             $("<img>").attr("src", "img/lago_maggiore_altezze_sm.svg")
             .addClass("dataviz_img")
@@ -498,184 +154,40 @@ $(window).resize(function() {
             $("<img>").attr("src", "img/lago_maggiore_portate_sm.svg")
             .addClass("dataviz_img")
             .appendTo(".container_dataviz_portate_laghi");
-        }
-        // CLICK BOTTONE LAGHI --> selezionare lago 
+        }else  if(eventi.lago_como.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-        // ---------------------------------------------- LAGO MAGGIORE
-        jQuery("#lago_maggiore").click(function(){
-            if(eventi.lago_maggiore.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_maggiore.stato = "attivo";
-                jQuery("#lago_maggiore").addClass("active");
+            $("<img>").attr("src", "img/lago_como_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                jQuery(".regioni").text(eventi.lago_maggiore.regioni);
-                jQuery(".superficie").text(eventi.lago_maggiore.superficie);
-                jQuery(".volume").text(eventi.lago_maggiore.volume);
-                jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
-                jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
+            $("<img>").attr("src", "img/lago_como_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else  if(eventi.lago_garda.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_maggiore.jpeg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
+            $("<img>").attr("src", "img/lago_garda_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
-                
-                jQuery(".dataviz_img").remove();
+            $("<img>").attr("src", "img/lago_garda_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else  if(eventi.lago_iseo.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-                $("<img>").attr("src", "img/lago_maggiore_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
+            $("<img>").attr("src", "img/lago_iseo_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                $("<img>").attr("src", "img/lago_maggiore_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO COMO
-        jQuery("#lago_como").click(function(){
-            if(eventi.lago_como.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_como.stato = "attivo";
-                jQuery("#lago_como").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_como.regioni);
-                jQuery(".superficie").text(eventi.lago_como.superficie);
-                jQuery(".volume").text(eventi.lago_como.volume);
-                jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
-                jQuery(".immissari").text(eventi.lago_como.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_como.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_como.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_como_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_como_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO ISEO
-        jQuery("#lago_iseo").click(function(){
-            if(eventi.lago_iseo.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_iseo.stato = "attivo";
-                jQuery("#lago_iseo").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_iseo.regioni);
-                jQuery(".superficie").text(eventi.lago_iseo.superficie);
-                jQuery(".volume").text(eventi.lago_iseo.volume);
-                jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
-                jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_iseo.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_iseo_altezze_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_iseo_portate_sm.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO GARDA
-        jQuery("#lago_garda").click(function(){
-            if(eventi.lago_garda.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_garda.stato = "attivo";
-                jQuery("#lago_garda").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_garda.regioni);
-                jQuery(".superficie").text(eventi.lago_garda.superficie);
-                jQuery(".volume").text(eventi.lago_garda.volume);
-                jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
-                jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_garda.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_garda_altezze_sm.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_garda_portate_sm.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
+            $("<img>").attr("src", "img/lago_iseo_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        } 
 
         // Piacenza
         $('.fonti_bordi_sx').removeClass("border_left").addClass("border_top");
@@ -683,6 +195,7 @@ $(window).resize(function() {
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
         $('.col-sparisce').addClass("not-visible");
+        $('.piacenza_container_dataviz .dataviz_img').remove();
         // $("<img>").attr("src", "img/piacenza_portate_sm.svg")
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
@@ -717,183 +230,58 @@ $(window).resize(function() {
         $('.col-sparisce').removeClass("not-visible");
         // Grandi Laghi
         $('.fonti_laghi_container').addClass("border_bottom");
-        // CLICK BOTTONE LAGHI --> selezionare lago 
 
-        // ---------------------------------------------- LAGO MAGGIORE
-        jQuery("#lago_maggiore").click(function(){
-            if(eventi.lago_maggiore.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_maggiore.stato = "attivo";
-                jQuery("#lago_maggiore").addClass("active");
+        if(eventi.lago_maggiore.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-                jQuery(".regioni").text(eventi.lago_maggiore.regioni);
-                jQuery(".superficie").text(eventi.lago_maggiore.superficie);
-                jQuery(".volume").text(eventi.lago_maggiore.volume);
-                jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
-                jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
+            $("<img>").attr("src", "img/lago_maggiore_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_maggiore.jpeg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
+            $("<img>").attr("src", "img/lago_maggiore_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else  if(eventi.lago_como.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_maggiore_altezze.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
+            $("<img>").attr("src", "img/lago_como_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                $("<img>").attr("src", "img/lago_maggiore_portate.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
+            $("<img>").attr("src", "img/lago_como_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else  if(eventi.lago_garda.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-        // ---------------------------------------------- LAGO COMO
-        jQuery("#lago_como").click(function(){
-            if(eventi.lago_como.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_como.stato = "attivo";
-                jQuery("#lago_como").addClass("active");
+            $("<img>").attr("src", "img/lago_garda_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                jQuery(".regioni").text(eventi.lago_como.regioni);
-                jQuery(".superficie").text(eventi.lago_como.superficie);
-                jQuery(".volume").text(eventi.lago_como.volume);
-                jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
-                jQuery(".immissari").text(eventi.lago_como.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_como.emissari_principali);
+            $("<img>").attr("src", "img/lago_garda_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else  if(eventi.lago_iseo.stato == "attivo"){
+            jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+            jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
 
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_como.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
+            $("<img>").attr("src", "img/lago_iseo_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
 
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
-                
-                jQuery(".dataviz_img").remove();
-
-                $("<img>").attr("src", "img/lago_como_altezze.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_como_portate.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO ISEO
-        jQuery("#lago_iseo").click(function(){
-            if(eventi.lago_iseo.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_iseo.stato = "attivo";
-                jQuery("#lago_iseo").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_iseo.regioni);
-                jQuery(".superficie").text(eventi.lago_iseo.superficie);
-                jQuery(".volume").text(eventi.lago_iseo.volume);
-                jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
-                jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_iseo.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
-                
-                jQuery(".dataviz_img").remove();
-                
-                $("<img>").attr("src", "img/lago_iseo_altezze.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_iseo_portate.svg")
-                        .addClass("dataviz_img")
-                        .appendTo(".container_dataviz_portate_laghi");
-                
-            } 
-        });
-
-        // ---------------------------------------------- LAGO GARDA
-        jQuery("#lago_garda").click(function(){
-            if(eventi.lago_garda.stato == "spento"){
-                for(var i=0; i<4; i++){
-                    if(eventi[laghi[i]].stato == "attivo"){
-                        eventi[laghi[i]].stato = "spento";
-                        jQuery("#" + laghi[i]).removeClass("active");
-                    }
-                }
-                eventi.lago_garda.stato = "attivo";
-                jQuery("#lago_garda").addClass("active");
-
-                jQuery(".regioni").text(eventi.lago_garda.regioni);
-                jQuery(".superficie").text(eventi.lago_garda.superficie);
-                jQuery(".volume").text(eventi.lago_garda.volume);
-                jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
-                jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
-                jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
-                jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
-
-                jQuery(".laghi_img").remove();
-                $("<img>").attr("src", "img/lago_garda.jpg")
-                            .addClass("laghi_img")
-                            .appendTo(".container_img_laghi");
-                jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
-
-                jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
-                jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
-                jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
-                
-                jQuery(".dataviz_img").remove();
-                $("<img>").attr("src", "img/lago_garda_altezze.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_altezze_laghi");
-
-                $("<img>").attr("src", "img/lago_garda_portate.svg")
-                .addClass("dataviz_img")
-                .appendTo(".container_dataviz_portate_laghi");  
-            } 
-        });
+            $("<img>").attr("src", "img/lago_iseo_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        } 
 
         // Piacenza
+        $('.piacenza_container_dataviz .dataviz_img').remove();
+        $("<img>").attr("src", "img/piacenza_portate.svg")
+                .addClass("dataviz_img")
+                .appendTo(".piacenza_container_dataviz");
         $('.fonti_bordi_sx').removeClass("border_top").addClass('border_left');
         $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
@@ -906,6 +294,228 @@ $(window).resize(function() {
         $('#about_divisoria').addClass("border_left");
     }
 });
+
+
+
+
+
+// CLICK BOTTONE LAGHI --> selezionare lago
+// ---------------------------------------------- LAGO MAGGIORE
+jQuery("#lago_maggiore").click(function(){
+    if(eventi.lago_maggiore.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_maggiore.stato = "attivo";
+        jQuery("#lago_maggiore").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_maggiore.regioni);
+        jQuery(".superficie").text(eventi.lago_maggiore.superficie);
+        jQuery(".volume").text(eventi.lago_maggiore.volume);
+        jQuery(".profondità_massima").text(eventi.lago_maggiore.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_maggiore.profondità_media);
+        jQuery(".immissari").text(eventi.lago_maggiore.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_maggiore.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_maggiore.jpeg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Photo by SlimMars 13 from Pexels.com")
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago Maggiore nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago Maggiore nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Pur rimanendo sempre sopra la minima storica, i valori più bassi dell’altezza idrometrica risultano essere quelli relativi al 2022, in cui la media mensile rasenta lo zero idrometrico e tocca il picco del minimo storico durante il mese di giugno.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago Maggiore nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago Maggiore, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori di portata erogata del Lago Maggiore nel 2022 tendono ad avvicinarsi ai minimi storici in particolare nei mesi di febbraio e marzo, ma in generale risultano bassi per tutto l’arco annuale. Anche nel 2023 si registrano valori vicini ai minimi storici soprattutto nei mesi gennaio-marzo, mentre ad aprile scendono al di sotto dei minimi storici. In crescita invece i valori di giugno.");
+        
+        jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+        jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
+        if(larghezza_finestra<992){
+            $("<img>").attr("src", "img/lago_maggiore_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+    
+            $("<img>").attr("src", "img/lago_maggiore_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else{
+            $("<img>").attr("src", "img/lago_maggiore_altezze.svg")
+        .addClass("dataviz_img")
+        .appendTo(".container_dataviz_altezze_laghi");
+
+        $("<img>").attr("src", "img/lago_maggiore_portate.svg")
+        .addClass("dataviz_img")
+        .appendTo(".container_dataviz_portate_laghi");
+        }
+        
+    } 
+});
+
+// ---------------------------------------------- LAGO COMO
+jQuery("#lago_como").click(function(){
+    if(eventi.lago_como.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_como.stato = "attivo";
+        jQuery("#lago_como").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_como.regioni);
+        jQuery(".superficie").text(eventi.lago_como.superficie);
+        jQuery(".volume").text(eventi.lago_como.volume);
+        jQuery(".profondità_massima").text(eventi.lago_como.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_como.profondità_media);
+        jQuery(".immissari").text(eventi.lago_como.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_como.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_como.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Diego Delso, CC BY-SA 4.0, via Wikimedia Commons")
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Como nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Como nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. I valori più critici di altezza idrometrica registrati risultano essere quelli relativi al 2022, in cui gli indici toccano i valori di minima storica registrata (aprile 2022) e scendono al di sotto della media durante l’estate (luglio, agosto 2022).");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Como nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("Si può notare una decrescita dei valori soprattutto nel 2022 e 2023, non solo nei mesi più caldi, ma anche nel periodo invernale. In generale, i valori di portata erogata del Lago di Como nel 2022 tendono ad avvicinarsi ai minimi storici, fino a toccarli e raggiungere livelli inferiori nei mesi primaverili (aprile, maggio 2022).  è critico anche lo stato del 2023, in cui si registrano valori vicini ai minimi storici nei mesi invernali (gennaio, febbraio 2023) e ancora inferiori nei mesi primaverili (aprile, maggio 2023).");
+        
+        jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+        jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
+        if(larghezza_finestra<992){
+            $("<img>").attr("src", "img/lago_como_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+    
+            $("<img>").attr("src", "img/lago_como_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else{
+            $("<img>").attr("src", "img/lago_como_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+    
+            $("<img>").attr("src", "img/lago_como_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }
+    } 
+});
+
+// ---------------------------------------------- LAGO ISEO
+jQuery("#lago_iseo").click(function(){
+    if(eventi.lago_iseo.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_iseo.stato = "attivo";
+        jQuery("#lago_iseo").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_iseo.regioni);
+        jQuery(".superficie").text(eventi.lago_iseo.superficie);
+        jQuery(".volume").text(eventi.lago_iseo.volume);
+        jQuery(".profondità_massima").text(eventi.lago_iseo.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_iseo.profondità_media);
+        jQuery(".immissari").text(eventi.lago_iseo.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_iseo.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_iseo.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Goldmund100, CC BY-SA 3.0, via Wikimedia Commons")
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago d'Iseo nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago d’Iseo nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Notiamo che l’altezza idrometrica è sempre rientrante nella media ma, come negli altri laghi, il 2022 rimane l’anno più critico del triennio, con valori negativi che a tratti si avvicinano alla minima storica.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago d'Iseo nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago d’Iseo, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. I valori restano alti nel 2021, mentre nel 2022 iniziano a decrescere fino a scendere al di sotto dei minimi storici nei mesi di aprile e maggio. Relativamente bassi anche i valori nei mesi invernali. Nel 2023 si riprende a giugno, dopo una decrescita graduale da gennaio a maggio.");
+        
+        jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+        jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
+        if(larghezza_finestra<992){
+            $("<img>").attr("src", "img/lago_iseo_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+    
+            $("<img>").attr("src", "img/lago_iseo_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else{
+            $("<img>").attr("src", "img/lago_iseo_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+    
+            $("<img>").attr("src", "img/lago_iseo_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }
+    } 
+});
+
+// ---------------------------------------------- LAGO GARDA
+jQuery("#lago_garda").click(function(){
+    if(eventi.lago_garda.stato == "spento"){
+        for(var i=0; i<4; i++){
+            if(eventi[laghi[i]].stato == "attivo"){
+                eventi[laghi[i]].stato = "spento";
+                jQuery("#" + laghi[i]).removeClass("active");
+            }
+        }
+        eventi.lago_garda.stato = "attivo";
+        jQuery("#lago_garda").addClass("active");
+
+        jQuery(".regioni").text(eventi.lago_garda.regioni);
+        jQuery(".superficie").text(eventi.lago_garda.superficie);
+        jQuery(".volume").text(eventi.lago_garda.volume);
+        jQuery(".profondità_massima").text(eventi.lago_garda.profondità_massima);
+        jQuery(".profondità_media").text(eventi.lago_garda.profondità_media);
+        jQuery(".immissari").text(eventi.lago_garda.immissari_principali);
+        jQuery(".emissari").text(eventi.lago_garda.emissari_principali);
+
+        jQuery(".laghi_img").remove();
+        $("<img>").attr("src", "img/lago_garda.jpg")
+                    .addClass("laghi_img")
+                    .appendTo(".container_img_laghi");
+        jQuery(".fonti_laghi_img").text("Ampfinger assumed (based on copyright claims), CC BY-SA 3.0, via Wikimedia Commons")
+
+        jQuery(".titolo_dataviz_laghi_altezze").text("Come è cambiata l'altezza idrometrica del Lago di Garda nel triennio 2021-2023");
+        jQuery(".descrizione_altezze_laghi").text("Nel grafico vengono visualizzate le diverse altezze medie mensili del Lago di Garda nel triennio 2021-2023, da confrontarsi con i livelli massimi e minimi storici relativi al periodo 1946-2022. Rispetto agli altri laghi, questo non ha valori negativi, si nota però un trend che da fine 2021 porta sempre più a un abbassamento dell’altezza idrometrica, arrivando nel 2022 e 2023 a sfiorare la minima storica.");
+        jQuery(".titolo_dataviz_laghi_portate").text("Come è cambiata la portata erogata del Lago di Garda nel triennio 2021-2023");
+        jQuery(".descrizione_portate_laghi").text("I grafici mettono in correlazione la portata erogata e i livelli minimi di erogazione registrati negli anni 1946-2022 per il Lago di Garda, per mettere in evidenza la quantità di acqua erogata rispetto ai minimi storici. Dopo le grandi quantità di portata erogata tra gennaio e settembre 2021, che rimane alta sia nei mesi più freddi, sia nei mesi più caldi del periodo citato, si registra una graduale decrescita tra ottobre e dicembre 2022, in cui i valori si avvicinano ai minimi storici registrati. Anche nei primi mesi del 2023 (quindi nell’intera stagione invernale) si rilevano dati molto vicini ai minimi storici. I valori si riprendono nella primavera 2022, ma scendono nuovamente nel periodo autunnale e invernale, senza più riprese neanche nell’estate 2023.");
+        
+        jQuery(".container_dataviz_altezze_laghi .dataviz_img").remove();
+        jQuery(".container_dataviz_portate_laghi .dataviz_img").remove();
+        if(larghezza_finestra<992){
+            $("<img>").attr("src", "img/lago_garda_altezze_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+
+            $("<img>").attr("src", "img/lago_garda_portate_sm.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }else{
+            $("<img>").attr("src", "img/lago_garda_altezze.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_altezze_laghi");
+
+            $("<img>").attr("src", "img/lago_garda_portate.svg")
+            .addClass("dataviz_img")
+            .appendTo(".container_dataviz_portate_laghi");
+        }
+       
+        
+    } 
+});
+
+
 
 /* INIZIALIZZAZIONE MAPBOX */
 var next;
