@@ -915,10 +915,6 @@ p.p-fonti{
     padding-top: 30px;
 }
 
-.dataviz_descrizione_piacenza{
-    padding-top: 60px;
-}
-
 /************* Approfondimento Cremona *************/
 
 #approfondimenti-6{
@@ -1272,6 +1268,18 @@ pointer-events: all;
         padding-top: 30px;
     }
 
+    .padding-left-sm-0{
+        padding-left: 0px;
+    }
+
+    .padding-right-sm-0{
+        padding-right: 0px;
+    }
+
+    .padding-top-sm-0{
+        padding-top: 0px;
+    }
+
     .padding-bottom-sm-0{
         padding-bottom: 0px;
     }
@@ -1560,6 +1568,11 @@ pointer-events: all;
 
     .approfondimenti_piacenza{
         padding: 30px;
+    }
+
+    .dataviz_legenda-sm{
+        width: 100%;
+        padding-top: 15px;
     }
 
 }

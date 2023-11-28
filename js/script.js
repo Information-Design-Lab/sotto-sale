@@ -16,6 +16,10 @@ $(document).ready(function() {
 	}
     // MODIFICHE PER TABLET
     if(larghezza_finestra < 992) {
+        // Modifiche in comune a elementi approfondimenti
+        $('.fonti_fine_pagina_bordi_sx').removeClass("border_left").addClass("border_top");
+        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
@@ -218,21 +222,26 @@ $(document).ready(function() {
         });
 
         // Piacenza
-        $('.fonti_bordi_sx').removeClass("border_left");
         $('#video_piacenza_fonte').text("↑  Fonte: euronews.com, video di: AP Photo")
-        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
         $('.col-sparisce').addClass("not-visible");
         // $("<img>").attr("src", "img/piacenza_portate_sm.svg")
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
                 .appendTo(".piacenza_container_dataviz");
+        $('.piacenza_legenda').addClass("order-1");
+        $('.piacenza_testo').addClass("order-2");
 
         // Cremona
         $("<img>").attr("src", "img/cremona_portate.gif")
                 .addClass("dataviz_img")
                 .addClass("padding-top")
                 .appendTo(".cremona_container_gif");
+        $("<img>").attr("src", "img/Cremona_portate.svg")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_dataviz");
+        $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023")
 
         
         // About
@@ -244,13 +253,16 @@ $(document).ready(function() {
     }
     // MODIFICHE PER DESKTOP
     else{
+        // Modifiche in comune a elementi approfondimenti
+        $('.fonti_fine_pagina_bordi_sx').removeClass("border_top").addClass("border_left");
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
         // Pian Del Re
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
-        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
         $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso, un Video di Riseria Ferron.");
         $('.col-sparisce').removeClass("not-visible");
         // Grandi Laghi
@@ -432,10 +444,12 @@ $(document).ready(function() {
         });
 
         // Piacenza
-        $('.fonti_bordi_sx').removeClass("border_top").addClass('border_left');
         $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
-        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
+
+        //Cremona
+
+        $('#video_cremona_fonte').text("←  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023")
 
          // About
          $('#img_about').removeClass("order-1");
@@ -673,6 +687,8 @@ $(window).resize(function() {
         $("<img>").attr("src", "img/piacenza_portate.svg")
                 .addClass("dataviz_img")
                 .appendTo(".piacenza_container_dataviz");
+        $('.piacenza_legenda').addClass("order-1");
+        $('.piacenza_testo').addClass("order-2");
 
          // Cremona
          // $("<img>").attr("src", "img/cremona_portate_sm.gif")
