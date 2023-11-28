@@ -3,13 +3,6 @@ let larghezza_finestra;
 $(document).ready(function() {
 	larghezza_finestra = $(window).outerWidth();
 
-    // Grandi Laghi
-    /* var altezza_info_su = $(".nomi_laghi").outerHeight();
-	$(".info_su").css("height",altezza_info_su); */
-    /* 
-    var altezza_tabella_laghi = $(".laghi_col_dx").outerHeight();
-	$(".laghi_col_sx").css("height",altezza_tabella_laghi); */
-
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
 
@@ -59,6 +52,9 @@ $(document).ready(function() {
         $('.piacenza_testo').addClass("order-2");
 
         // Cremona
+        $('.cremona_container_gif .dataviz_img').remove();
+        //  $("<img>").attr("src", "img/cremona_portate_sm.gif")
+        $('.cremona_container_dataviz .dataviz_img').remove();
         $("<img>").attr("src", "img/cremona_portate.gif")
                 .addClass("dataviz_img")
                 .addClass("padding-top")
@@ -67,8 +63,7 @@ $(document).ready(function() {
                 .addClass("dataviz_img")
                 .addClass("padding-top")
                 .appendTo(".cremona_container_dataviz");
-        $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023")
-
+        $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
         
         // About
         $('#img_about').addClass("order-1");
@@ -102,8 +97,18 @@ $(document).ready(function() {
         $('#video_piacenza_fonte').text("←  Fonte: euronews.com, video di: AP Photo")
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
 
-        //Cremona
 
+        // Cremona
+        $('.cremona_container_gif .dataviz_img').remove();
+        $('.cremona_container_dataviz .dataviz_img').remove();
+        $("<img>").attr("src", "img/cremona_portate.gif")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_gif");
+        $("<img>").attr("src", "img/Cremona_portate.svg")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_dataviz");
         $('#video_cremona_fonte').text("←  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023")
 
          // About
@@ -118,12 +123,6 @@ $(document).ready(function() {
 $(window).resize(function() {
 	larghezza_finestra = $(window).outerWidth();
 
-    // Grandi Laghi
-    /* var altezza_info_su = $(".nomi_laghi").outerHeight();
-	$(".info_su").css("height",altezza_info_su); */
-/* 
-    var altezza_tabella_laghi = $(".laghi_col_dx").outerHeight();
-	$(".laghi_col_sx").css("height",altezza_tabella_laghi); */
 
     // MODIFICHE PER MOBILE
     if(larghezza_finestra < 576) {
@@ -131,6 +130,10 @@ $(window).resize(function() {
 	}
      // MODIFICHE PER TABLET
      if(larghezza_finestra < 992) {
+        // Modifiche in comune a elementi approfondimenti
+        $('.fonti_fine_pagina_bordi_sx').removeClass("border_left").addClass("border_top");
+        $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
         $('.cartiglio_dx').removeClass("border_top");
@@ -202,14 +205,20 @@ $(window).resize(function() {
                 .appendTo(".piacenza_container_dataviz");
         $('.piacenza_legenda').addClass("order-1");
         $('.piacenza_testo').addClass("order-2");
-
+         
          // Cremona
-         // $("<img>").attr("src", "img/cremona_portate_sm.gif")
-         $("<img>").attr("src", "img/cremona_portate.gif")
-         .addClass("dataviz_img")
-         .addClass("padding-top")
-         .appendTo(".cremona_container_gif");
-
+        $('.cremona_container_gif .dataviz_img').remove();
+        $('.cremona_container_dataviz .dataviz_img').remove();
+        // $("<img>").attr("src", "img/cremona_portate_sm.gif")
+        $("<img>").attr("src", "img/cremona_portate.gif")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_gif");
+        $("<img>").attr("src", "img/Cremona_portate.svg")
+                .addClass("dataviz_img")
+                .addClass("padding-top")
+                .appendTo(".cremona_container_dataviz");
+        $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
 
          // About
         $('#img_about').addClass("order-1");
@@ -217,8 +226,12 @@ $(window).resize(function() {
         $('#testo_about').addClass("order-3");
         $('#about_divisoria').removeClass("border_left");
     }
+
     // MODIFICHE PER DESKTOP
     else{
+        // Modifiche in comune a elementi approfondimenti
+        $('.fonti_fine_pagina_bordi_sx').removeClass("border_top").addClass("border_left");
+        $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').removeClass("border_right");
         $('.cartiglio_dx').addClass("border_top");
@@ -287,6 +300,20 @@ $(window).resize(function() {
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
         $('#isole_fiume_fonte').text("↑  Fonte: The European Space Agency modified Copernicus Sentinel data (2020-22), processed by ESA, CC BY-SA 3.0 IGO");
 
+         // Cremona
+         $('.cremona_container_gif .dataviz_img').remove();
+         $('.cremona_container_dataviz .dataviz_img').remove();
+         // $("<img>").attr("src", "img/cremona_portate_sm.gif")
+         $("<img>").attr("src", "img/cremona_portate.gif")
+                 .addClass("dataviz_img")
+                 .addClass("padding-top")
+                 .appendTo(".cremona_container_gif");
+         $("<img>").attr("src", "img/Cremona_portate.svg")
+                 .addClass("dataviz_img")
+                 .addClass("padding-top")
+                 .appendTo(".cremona_container_dataviz");
+        $('#video_cremona_fonte').text("←  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
+        
         // About
         $('#img_about').removeClass("order-1");
         $('#col_about').removeClass("order-2");

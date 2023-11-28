@@ -1597,7 +1597,10 @@ pointer-events: all;
     /************* Approfondimento Piacenza *************/
 
     .approfondimenti_piacenza{
-        padding: 30px;
+        padding-left: 10.5%;
+        padding-right: 10.5%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .dataviz_legenda-sm{
