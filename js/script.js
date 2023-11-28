@@ -65,6 +65,10 @@ $(document).ready(function() {
                 .appendTo(".cremona_container_dataviz");
         $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
         
+        //Boretto
+        $('#video_boretto_fonte').text("↑  Fonte: euronews.com, video di: AP Photo");
+        
+
         // About
         $('#img_about').addClass("order-1");
         $('#col_about').addClass("order-2");
@@ -110,6 +114,9 @@ $(document).ready(function() {
                 .addClass("padding-top")
                 .appendTo(".cremona_container_dataviz");
         $('#video_cremona_fonte').text("←  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023")
+
+        //Boretto
+        $('#video_boretto_fonte').text("←  Fonte: euronews.com, video di: AP Photo");
 
          // About
          $('#img_about').removeClass("order-1");
@@ -220,6 +227,10 @@ $(window).resize(function() {
                 .appendTo(".cremona_container_dataviz");
         $('#video_cremona_fonte').text("↑  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
 
+        //Boretto
+        $('#video_boretto_fonte').text("↑  Fonte: euronews.com, video di: AP Photo");
+
+
          // About
         $('#img_about').addClass("order-1");
         $('#col_about').addClass("order-2");
@@ -314,6 +325,9 @@ $(window).resize(function() {
                  .appendTo(".cremona_container_dataviz");
         $('#video_cremona_fonte').text("←  Fonte: Autorità Distrettuale Fiume Po (ADBPo) - Osservatorio Crisi Idriche, Bratti: Siccità peggiorata nel Distretto del Po, 13/04/2023");
         
+        //Boretto
+        $('#video_boretto_fonte').text("←  Fonte: euronews.com, video di: AP Photo");
+
         // About
         $('#img_about').removeClass("order-1");
         $('#col_about').removeClass("order-2");

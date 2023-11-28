@@ -965,15 +965,8 @@ p.p-fonti{
 }
 
 .bollettino_boretto{
-    font-family: 'PP Telegraf', sans-serif;
-    font-weight: normal;
-    font-size: 1rem;
     padding-top: 40px;
     padding-left: 60px;
-}
-
-.approfondimenti_boretto{
-    padding: 100px;
 }
 
 /************* Approfondimento Pontelagoscuro *************/
@@ -1607,6 +1600,22 @@ pointer-events: all;
         width: 100%;
         padding-top: 15px;
     }
+    /************* Approfondimento Cremona *************/
+
+    /************* Approfondimento Boretto *************/
+
+    .bollettino_boretto{
+    padding-top: 40px;
+    padding-left: 0px;
+    }
+
+    .approfondimenti_boretto{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
 
 }
 
