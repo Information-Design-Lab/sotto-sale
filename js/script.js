@@ -12,6 +12,7 @@ $(document).ready(function() {
         // Modifiche in comune a elementi approfondimenti
         $('.fonti_fine_pagina_bordi_sx').removeClass("border_left").addClass("border_top");
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
+        $('.col-sparisce').addClass("not-visible");
 
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').addClass("border_right");
@@ -22,7 +23,6 @@ $(document).ready(function() {
         $('.fonti_bordi_dx').removeClass("border_right").addClass("border_top").addClass("border_bottom");
         $('#mare_quadretti_fonte').text("↑  Foto: Copyright © 2016, Andrea Cherci (@cherchiandrea) on Twitter");
         $('#video_mare_quadretti_fonte').text("↑  Suoni e colori del riso, un Video di Riseria Ferron.");
-        $('.col-sparisce').addClass("not-visible");
         // Grandi Laghi
         $('.fonti_laghi_container').removeClass("border_bottom");
         if(eventi.lago_maggiore.stato == "attivo"){
@@ -81,6 +81,7 @@ $(document).ready(function() {
         // Modifiche in comune a elementi approfondimenti
         $('.fonti_fine_pagina_bordi_sx').removeClass("border_top").addClass("border_left");
         $('.fonti_bordi_dx').removeClass("border_top").removeClass("border_bottom").addClass("border_right");
+        $('.col-sparisce').removeClass("not-visible");
 
         // Modifiche bordi cartiglio index
         $('.cartiglio_sx').removeClass("border_right");
@@ -89,7 +90,6 @@ $(document).ready(function() {
         $('.frecce_fonti_sx').text("←");
         // Candia Lomellina
         $('#video_mare_quadretti_fonte').text("←  Suoni e colori del riso, un Video di Riseria Ferron.");
-        $('.col-sparisce').removeClass("not-visible");
         // Grandi Laghi
         $('.fonti_laghi_container').addClass("border_bottom");
 
