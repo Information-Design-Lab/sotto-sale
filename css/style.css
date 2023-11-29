@@ -1629,8 +1629,8 @@ pointer-events: all;
     .approfondimenti_boretto{
         padding-top: 30px;
         padding-bottom: 30px;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     /************* Approfondimento Delta *************/
