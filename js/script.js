@@ -593,7 +593,7 @@ map.on('click', (event) => {
     let Guastalla_audio = document.getElementById("Guastalla_audio");
 
     const features = map.queryRenderedFeatures(event.point, {
-        layers: ['sottosale-tappe'] 
+        layers: ['sottosale_tappe-4c57zk'] 
     });
     if (!features.length) {
         return;
