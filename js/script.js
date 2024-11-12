@@ -1611,7 +1611,7 @@ jQuery(".about-2 .close").click(function(){
 
 jQuery(".satellite_off").click(function(){
     if(eventi.Stile_Mappa.satellite === false){
-        map.setStyle('mapbox://styles/martamezzetti/cliwwaowq00m801p75ssrc43u')
+        map.setStyle('mapbox://styles/nicolosinatra/cm3ef1oac004l01qpb513am57')
         eventi.Stile_Mappa.satellite = true;
         jQuery("#logo").removeClass("visible")
         jQuery("#logo_w").addClass("visible")
@@ -1624,7 +1624,7 @@ jQuery(".satellite_off").click(function(){
 });
 jQuery(".idrografica_off").click(function(){
     if(eventi.Stile_Mappa.satellite){
-        map.setStyle('mapbox://styles/martamezzetti/clivumhbo00jj01qyakm16o9r')
+        map.setStyle('mapbox://styles/nicolosinatra/cm3ebyu72004i01pe38pt0oaq')
         eventi.Stile_Mappa.satellite = false;
         jQuery("#logo_w").removeClass("visible")
         jQuery("#logo").addClass("visible")
