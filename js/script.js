@@ -573,10 +573,12 @@ var eventi = {
     lago_garda: { stato: "spento", regioni: "Lombardia, Veneto, Trentino - Alto Adige", superficie: 368, volume: 49, profondità_massima: 346, profondità_media: 133, immissari_principali: "Sarca", emissari_principali: "Mincio" }
 };
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWFydGFtZXp6ZXR0aSIsImEiOiJjbGh0MHM0ZmowNnA4M2puMzdxdDA4a3VsIn0.3ANiEbNc0KJWDpT8raXhuw';
+mapboxgl.accessToken = 'pk.eyJ1Ijoibmljb2xvc2luYXRyYSIsImEiOiJjbGs4ZTd0aWowaXNqM2ZybzEzYmplaGF3In0.zJYGpj2MF2Nw8M8XHuXc8Q';
+// mapboxgl.accessToken = 'pk.eyJ1IjoibWFydGFtZXp6ZXR0aSIsImEiOiJjbGh0MHM0ZmowNnA4M2puMzdxdDA4a3VsIn0.3ANiEbNc0KJWDpT8raXhuw';
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/martamezzetti/clivumhbo00jj01qyakm16o9r',
+    style: 'mapbox://styles/nicolosinatra/cm3ebyu72004i01pe38pt0oaq',
+    // style: 'mapbox://styles/martamezzetti/clivumhbo00jj01qyakm16o9r',
     // center: [9.368204, 45.337551],
     // zoom: 7.3
     center: [7.09241, 44.70051], // Pian Del Re
@@ -591,7 +593,7 @@ map.on('click', (event) => {
     let Guastalla_audio = document.getElementById("Guastalla_audio");
 
     const features = map.queryRenderedFeatures(event.point, {
-        layers: ['tappe-fiume-po-sottosale'] 
+        layers: ['sottosale-tappe'] 
     });
     if (!features.length) {
         return;
